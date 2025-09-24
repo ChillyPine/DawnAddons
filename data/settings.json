@@ -1,0 +1,724 @@
+[
+    {
+        "category": "Dungeons",
+        "settings": [
+            {
+                "type": 6,
+                "name": "customDeathMessageToggle",
+                "value": false
+            },
+            {
+                "type": 4,
+                "name": "customDeathMessage",
+                "value": ""
+            },
+            {
+                "type": 6,
+                "name": "fftimer",
+                "value": true
+            },
+            {
+                "type": 6,
+                "name": "hidedoors",
+                "value": true
+            },
+            {
+                "type": 6,
+                "name": "KEYESP",
+                "value": true
+            },
+            {
+                "type": 6,
+                "name": "keytracerWB",
+                "value": true
+            },
+            {
+                "type": 6,
+                "name": "CrystalHolder",
+                "value": false
+            },
+            {
+                "type": 6,
+                "name": "stormbox",
+                "value": true
+            },
+            {
+                "type": 5,
+                "name": "StormColor",
+                "value": [
+                    67,
+                    241,
+                    71,
+                    255
+                ]
+            },
+            {
+                "type": 6,
+                "name": "golderbox",
+                "value": true
+            },
+            {
+                "type": 5,
+                "name": "golderboxcolor",
+                "value": [
+                    255,
+                    16,
+                    51,
+                    255
+                ]
+            },
+            {
+                "type": 6,
+                "name": "necronLeap",
+                "value": false
+            },
+            {
+                "type": 6,
+                "name": "ArrowStackHelper",
+                "value": true
+            },
+            {
+                "type": 6,
+                "name": "RelicHolder",
+                "value": false
+            },
+            {
+                "type": 6,
+                "name": "keySoundDrop",
+                "value": false
+            },
+            {
+                "type": 4,
+                "name": "keysoundsoundingsounder",
+                "value": ""
+            },
+            {
+                "type": 6,
+                "name": "endrunmusic",
+                "value": true
+            },
+            {
+                "type": 6,
+                "name": "simonsaystime",
+                "value": true
+            },
+            {
+                "type": 6,
+                "name": "notifyPartySimonSays",
+                "value": true
+            },
+            {
+                "type": 6,
+                "name": "watcheryaphider",
+                "value": true
+            },
+            {
+                "type": 6,
+                "name": "detectplayersatcoords",
+                "value": false
+            },
+            {
+                "type": 6,
+                "name": "atlocaiton",
+                "value": true
+            },
+            {
+                "type": 6,
+                "name": "atsimonsays",
+                "value": true
+            },
+            {
+                "type": 6,
+                "name": "underpillar",
+                "value": false
+            },
+            {
+                "type": 6,
+                "name": "underpillarPAD",
+                "value": false
+            },
+            {
+                "type": 6,
+                "name": "atee2",
+                "value": true
+            },
+            {
+                "type": 6,
+                "name": "atee3",
+                "value": true
+            },
+            {
+                "type": 6,
+                "name": "atincore",
+                "value": true
+            },
+            {
+                "type": 6,
+                "name": "atinstamid",
+                "value": false
+            }
+        ]
+    },
+    {
+        "category": "Party Finder",
+        "settings": [
+            {
+                "type": 6,
+                "name": "quickpartyact",
+                "value": true
+            },
+            {
+                "type": 6,
+                "name": "shortPF",
+                "value": true
+            },
+            {
+                "type": 6,
+                "name": "blacklist",
+                "value": false
+            },
+            {
+                "type": 4,
+                "name": "blacklistIGN",
+                "value": ""
+            },
+            {
+                "type": 6,
+                "name": "kickNotWelcomePlayer",
+                "value": false
+            },
+            {
+                "type": 6,
+                "name": "anncshitter",
+                "value": true
+            },
+            {
+                "type": 4,
+                "name": "customShitterMessage",
+                "value": ""
+            },
+            {
+                "type": 6,
+                "name": "missingclasses",
+                "value": false
+            },
+            {
+                "type": 6,
+                "name": "autokick",
+                "value": false
+            },
+            {
+                "type": 7,
+                "name": "selectedfloor",
+                "value": 0
+            },
+            {
+                "type": 4,
+                "name": "requiredPB",
+                "value": ""
+            },
+            {
+                "type": 6,
+                "name": "kickmessage",
+                "value": false
+            }
+        ]
+    },
+    {
+        "category": "Notifications",
+        "settings": [
+            {
+                "type": 6,
+                "name": "inchatnoti",
+                "value": false
+            },
+            {
+                "type": 6,
+                "name": "onscreennoti",
+                "value": false
+            },
+            {
+                "type": 6,
+                "name": "BSPM",
+                "value": true
+            },
+            {
+                "type": 6,
+                "name": "BSPMR",
+                "value": false
+            },
+            {
+                "type": 6,
+                "name": "watchernoti",
+                "value": true
+            },
+            {
+                "type": 6,
+                "name": "bloodDoneParty",
+                "value": true
+            },
+            {
+                "type": 6,
+                "name": "diaskipnoti",
+                "value": true
+            },
+            {
+                "type": 6,
+                "name": "bloodroomopen",
+                "value": true
+            },
+            {
+                "type": 6,
+                "name": "bloodroomfull",
+                "value": true
+            },
+            {
+                "type": 6,
+                "name": "bloodroomcleared",
+                "value": true
+            },
+            {
+                "type": 6,
+                "name": "lockedchestnoti",
+                "value": true
+            },
+            {
+                "type": 6,
+                "name": "autonotikick",
+                "value": true
+            },
+            {
+                "type": 6,
+                "name": "m5Wish",
+                "value": true
+            },
+            {
+                "type": 6,
+                "name": "BottleFullNoti",
+                "value": true
+            },
+            {
+                "type": 6,
+                "name": "ArrowNotif",
+                "value": true
+            },
+            {
+                "type": 6,
+                "name": "goldenfishdetect",
+                "value": false
+            },
+            {
+                "type": 6,
+                "name": "ragDetect",
+                "value": true
+            },
+            {
+                "type": 1,
+                "name": "ragaxediaplytime",
+                "value": 38
+            },
+            {
+                "type": 7,
+                "name": "ragstrengtrhcolor",
+                "value": 5
+            },
+            {
+                "type": 4,
+                "name": "ragmessage",
+                "value": ""
+            },
+            {
+                "type": 6,
+                "name": "customragsound",
+                "value": true
+            },
+            {
+                "type": 4,
+                "name": "RagCustomSound",
+                "value": "note.pling"
+            },
+            {
+                "type": 6,
+                "name": "ragCoolDown",
+                "value": true
+            }
+        ]
+    },
+    {
+        "category": "! Commands",
+        "settings": [
+            {
+                "type": 6,
+                "name": "dtnoti",
+                "value": true
+            },
+            {
+                "type": 6,
+                "name": "playercoords",
+                "value": false
+            },
+            {
+                "type": 6,
+                "name": "coinflip",
+                "value": false
+            },
+            {
+                "type": 6,
+                "name": "roll",
+                "value": false
+            },
+            {
+                "type": 6,
+                "name": "eightball",
+                "value": false
+            },
+            {
+                "type": 6,
+                "name": "insult",
+                "value": false
+            },
+            {
+                "type": 6,
+                "name": "TPScheck",
+                "value": false
+            },
+            {
+                "type": 6,
+                "name": "ptme",
+                "value": false
+            },
+            {
+                "type": 6,
+                "name": "allinv",
+                "value": false
+            },
+            {
+                "type": 6,
+                "name": "warp",
+                "value": false
+            }
+        ]
+    },
+    {
+        "category": "Misc",
+        "settings": [
+            {
+                "type": 6,
+                "name": "BetterPL",
+                "value": true
+            },
+            {
+                "type": 6,
+                "name": "showmorepllist",
+                "value": true
+            },
+            {
+                "type": 6,
+                "name": "TacInstCoolDown",
+                "value": false
+            },
+            {
+                "type": 7,
+                "name": "TacInsertCOlor",
+                "value": 5
+            },
+            {
+                "type": 6,
+                "name": "showIRLtime",
+                "value": true
+            },
+            {
+                "type": 7,
+                "name": "clockcolor",
+                "value": 15
+            },
+            {
+                "type": 6,
+                "name": "etherwarpding",
+                "value": true
+            },
+            {
+                "type": 4,
+                "name": "etherwarpsoundsreplacment",
+                "value": "note.bass"
+            },
+            {
+                "type": 6,
+                "name": "inqdugup",
+                "value": false
+            },
+            {
+                "type": 4,
+                "name": "dianainqmesage",
+                "value": ""
+            },
+            {
+                "type": 6,
+                "name": "sendinqcoords",
+                "value": false
+            },
+            {
+                "type": 6,
+                "name": "sendvanqcoords",
+                "value": false
+            },
+            {
+                "type": 6,
+                "name": "sendvanqcoordsAC",
+                "value": false
+            },
+            {
+                "type": 6,
+                "name": "sendvanqcoordsPC",
+                "value": false
+            },
+            {
+                "type": 6,
+                "name": "sendvanqdead",
+                "value": false
+            },
+            {
+                "type": 6,
+                "name": "sendvanqACDEAD",
+                "value": false
+            },
+            {
+                "type": 6,
+                "name": "sendvanqPARTYDEAD",
+                "value": false
+            },
+            {
+                "type": 6,
+                "name": "DisplayDeploy",
+                "value": false
+            },
+            {
+                "type": 6,
+                "name": "DepthCheck",
+                "value": false
+            },
+            {
+                "type": 6,
+                "name": "quickmathsprimalfear",
+                "value": false
+            },
+            {
+                "type": 2,
+                "name": "instaBan"
+            },
+            {
+                "type": 2,
+                "name": "onClick"
+            },
+            {
+                "type": 2,
+                "name": "soundlistlink"
+            },
+            {
+                "type": 6,
+                "name": "showdebug",
+                "value": true
+            }
+        ]
+    },
+    {
+        "category": "Mining",
+        "settings": [
+            {
+                "type": 6,
+                "name": "amethystFinder",
+                "value": false
+            }
+        ]
+    },
+    {
+        "category": "ESPS",
+        "settings": [
+            {
+                "type": 6,
+                "name": "starmobesp",
+                "value": true
+            },
+            {
+                "type": 5,
+                "name": "boxStarredMobColor",
+                "value": [
+                    201,
+                    190,
+                    9,
+                    255
+                ]
+            },
+            {
+                "type": 5,
+                "name": "felboxcolor",
+                "value": [
+                    117,
+                    25,
+                    215,
+                    255
+                ]
+            },
+            {
+                "type": 6,
+                "name": "boxsa",
+                "value": true
+            },
+            {
+                "type": 6,
+                "name": "batesp",
+                "value": true
+            },
+            {
+                "type": 6,
+                "name": "batesptracer",
+                "value": false
+            },
+            {
+                "type": 5,
+                "name": "batespcolor",
+                "value": [
+                    18,
+                    221,
+                    199,
+                    255
+                ]
+            },
+            {
+                "type": 6,
+                "name": "spiritbearesp",
+                "value": false
+            },
+            {
+                "type": 5,
+                "name": "spiritbearespcolor",
+                "value": [
+                    34,
+                    221,
+                    38,
+                    255
+                ]
+            },
+            {
+                "type": 6,
+                "name": "Runicmobesp",
+                "value": false
+            },
+            {
+                "type": 6,
+                "name": "arachneesp",
+                "value": false
+            },
+            {
+                "type": 6,
+                "name": "RatESP",
+                "value": false
+            },
+            {
+                "type": 6,
+                "name": "MatchoESP",
+                "value": false
+            },
+            {
+                "type": 6,
+                "name": "playeresp",
+                "value": false
+            },
+            {
+                "type": 7,
+                "name": "playerespmode",
+                "value": 0
+            },
+            {
+                "type": 4,
+                "name": "playerespwhitelist",
+                "value": ""
+            },
+            {
+                "type": 6,
+                "name": "trapperesp",
+                "value": false
+            },
+            {
+                "type": 1,
+                "name": "trapperscansize",
+                "value": 10
+            },
+            {
+                "type": 6,
+                "name": "coreESP",
+                "value": false
+            },
+            {
+                "type": 6,
+                "name": "KeyGESP",
+                "value": false
+            },
+            {
+                "type": 6,
+                "name": "bfESP",
+                "value": false
+            },
+            {
+                "type": 6,
+                "name": "ggESP",
+                "value": false
+            },
+            {
+                "type": 6,
+                "name": "dgESP",
+                "value": false
+            },
+            {
+                "type": 6,
+                "name": "oldwolfESP",
+                "value": false
+            },
+            {
+                "type": 6,
+                "name": "GiftESP",
+                "value": false
+            },
+            {
+                "type": 6,
+                "name": "femboyESP",
+                "value": false
+            }
+        ]
+    },
+    {
+        "category": "Chat Blockers",
+        "settings": [
+            {
+                "type": 6,
+                "name": "blockBINTW",
+                "value": false
+            },
+            {
+                "type": 6,
+                "name": "BlockGUILDEXP",
+                "value": true
+            },
+            {
+                "type": 6,
+                "name": "hideprofileid",
+                "value": true
+            },
+            {
+                "type": 6,
+                "name": "hideprofilemsg",
+                "value": true
+            },
+            {
+                "type": 6,
+                "name": "LotteryMsg",
+                "value": true
+            },
+            {
+                "type": 6,
+                "name": "LinkWarningMsg",
+                "value": true
+            }
+        ]
+    }
+]

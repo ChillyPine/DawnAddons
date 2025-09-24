@@ -1,0 +1,16 @@
+{
+  "name": "DawnAddons",
+  "creator": "Lead: DwnInFraggleRock, Co: ChillyPine",
+  "version": "2.2.0",
+  "entry": "index.js",
+  "description": "It's dangerous to go alone! Take this.",
+  "requires": [
+      "BloomCore",
+      "Amaterasu",
+      "PogData",
+      "RenderLib",
+      "RenderLibv2",
+      "BeaconBeam",
+      "Atomx"
+  ]
+}
