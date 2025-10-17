@@ -11,6 +11,7 @@
       "RenderLib",
       "RenderLibv2",
       "BeaconBeam",
-      "Atomx"
+      "Atomx",
+      "tska"
   ]
 }

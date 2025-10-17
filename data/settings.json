@@ -229,16 +229,6 @@
         "settings": [
             {
                 "type": 6,
-                "name": "inchatnoti",
-                "value": false
-            },
-            {
-                "type": 6,
-                "name": "onscreennoti",
-                "value": false
-            },
-            {
-                "type": 6,
                 "name": "BSPM",
                 "value": true
             },
@@ -340,7 +330,7 @@
             {
                 "type": 6,
                 "name": "ragCoolDown",
-                "value": true
+                "value": false
             }
         ]
     },
@@ -424,6 +414,11 @@
             },
             {
                 "type": 6,
+                "name": "pickHolder",
+                "value": true
+            },
+            {
+                "type": 6,
                 "name": "showIRLtime",
                 "value": true
             },
@@ -431,6 +426,10 @@
                 "type": 7,
                 "name": "clockcolor",
                 "value": 15
+            },
+            {
+                "type": 2,
+                "name": "onClick"
             },
             {
                 "type": 6,
@@ -505,10 +504,6 @@
             {
                 "type": 2,
                 "name": "instaBan"
-            },
-            {
-                "type": 2,
-                "name": "onClick"
             },
             {
                 "type": 2,
@@ -662,12 +657,12 @@
             {
                 "type": 6,
                 "name": "ggESP",
-                "value": false
+                "value": true
             },
             {
                 "type": 6,
                 "name": "dgESP",
-                "value": false
+                "value": true
             },
             {
                 "type": 6,

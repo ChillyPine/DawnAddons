@@ -451,6 +451,13 @@ const defaultConf = new DefaultConfig("DawnAddons", "data/settings.json")
 })
 .addSwitch({
     category: "Misc",
+    configName: "pickHolder",
+    title: "Block Pickobulus on Private Island",
+    description: "Works with Stonk, Gemstone Gauntlet, and any items with the words \"Drill\" and \"Pickaxe\" in the name.",
+    subcategory: "General"
+})
+.addSwitch({
+    category: "Misc",
     configName: "showIRLtime",
     title: "IRL Time",
     description: "Creates a moveable GUI element to show your IRL time on screen. \n&eRun /timegui to move the HUD element.",
@@ -464,6 +471,15 @@ const defaultConf = new DefaultConfig("DawnAddons", "data/settings.json")
     options: ["Black","Dark Blue","Dark Green","Dark Aqua","Dark Red","Dark Purple","Gold","Gray","Dark Gray","Blue","Green","Aqua","Red","Light Purple","Yellow","White"],
     value: 0,
     subcategory: "IRL Time",
+    shouldShow(data){ return data.showIRLtime }
+})
+.addButton({
+    category: "Misc",
+    configName: "onClick",
+    title: "Move HUD Element",
+    description: "",
+    subcategory: "IRL Time",
+    onClick: () => ChatLib.command(`timegui`, true),
     shouldShow(data){ return data.showIRLtime }
 })
 .addSwitch({
@@ -1123,17 +1139,6 @@ const defaultConf = new DefaultConfig("DawnAddons", "data/settings.json")
     title: "Block Party Finder Warning Message",
     description: "",
     subcategory: "Dungeons"
-})
-.addButton({
-    category: "Misc",
-    configName: "onClick",
-    title: "Move HUD Element",
-    description: "",
-    subcategory: "IRL Time",
-    onClick() { 
-        ChatLib.chat("error")
-    },
-    shouldShow(data){ return data.showIRLtime }
 })
 .addButton({
     category: "Misc",

@@ -199,6 +199,10 @@ import './features/Notifications/BottleFullNotif'
 if (settings().showdebug) {
     ChatLib.chat(Debuger + " &fImported Bottle Full Notifier")
 }
+import './features/Misc/pickobulusBlocker'
+if (settings().showdebug) {
+    ChatLib.chat(Debuger + " &fImported Pickobulous Blocker")
+}
 
 //The below message lists all currently disabled modules/features. 
 // `(config)` indicates that it's been disabled in config.js, `(index)` indicates that it's been disabled in index.js, and `(.js)` indicates that it's been disabled in the actual code.
