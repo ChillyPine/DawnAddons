@@ -499,7 +499,7 @@
             {
                 "type": 6,
                 "name": "quickmathsprimalfear",
-                "value": false
+                "value": true
             },
             {
                 "type": 2,
@@ -613,6 +613,11 @@
                 "type": 6,
                 "name": "MatchoESP",
                 "value": false
+            },
+            {
+                "type": 6,
+                "name": "PrimalFearESP",
+                "value": true
             },
             {
                 "type": 6,

@@ -973,6 +973,13 @@ const defaultConf = new DefaultConfig("DawnAddons", "data/settings.json")
 })
 .addSwitch({
     category: "ESPS",
+    configName: "PrimalFearESP",
+    title: "Primal Fear ESP",
+    description: "",
+    subcategory: "General"
+})
+.addSwitch({
+    category: "ESPS",
     configName: "playeresp",
     title: "Player ESP",
     description: "",

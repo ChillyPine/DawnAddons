@@ -7,6 +7,7 @@ import Dungeon from "../../../BloomCore/dungeons/Dungeon"
 let inf4boss = false;
 let InJerryCave = false; 
 let ratESPtransparency = false;
+let playerIGN = Player.getName();
 
 
 register("chat", () => {
@@ -27,7 +28,7 @@ register("command", () => {
     ChatLib.chat(`&6[ESP] &7Rat's can be seen through walls: ${ratESPtransparency ? "&aTRUE" : "&cFALSE"}`);
 }).setName("ratesp");
 
-//getX, getY, getZ, something, something, r, g, b, something, see-through-walls
+// getX, getY, getZ, something, something, r, g, b, something, see-through-walls
 register("renderWorld", () => {
     const playerY = Player.getRenderY() + (Player.isSneaking() ? 1.54 : 1.62);
 
@@ -36,26 +37,67 @@ register("renderWorld", () => {
     World.getAllEntities().forEach(ent => {
         if(ent.getClassName() == "EntityArmorStand"){
             if(ent.distanceTo(Player.getX(), Player.getY(), Player.getZ())>100) return
-            //Gift ESP
+            // Gift ESP
             if(InJerryCave && settings().GiftESP) {
                 RenderLib.drawEspBox(ent.getX(), ent.getY() + 1, ent.getZ(), 1, 1, 1, 0, 1, 1, true);
             }
-            //Corleone
+            // Corleone
             if(ent.getName().includes("Corleone") && settings().coreESP){
                 RenderLib.drawEspBox(ent.getX(), ent.getY() - 2, ent.getZ(), 1, 2, 1, 0, 1, 1, true);
                 drawLine(Player.getRenderX(), playerY, Player.getRenderZ(), ent.getX(), ent.getY() - 1, ent.getZ(), 1, 0, 1, 1, 2);
             }
-            //Key Guardian
+            // Key Guardian
             if(ent.getName().includes("Key Guardian") && settings().KeyGESP){
                 RenderLib.drawEspBox(ent.getX(), ent.getY() - 2, ent.getZ(), 1, 2, 1, 0, 0, 1, true);
                 drawLine(Player.getRenderX(), playerY, Player.getRenderZ(), ent.getX(), ent.getY() - 1, ent.getZ(), 1, 0, 0, 1, 2);
             }
-            //Matcho ESP
+            // Matcho ESP
             if(ent.getName().includes("Matcho") && settings().MatchoESP){
                 RenderLib.drawEspBox(ent.getX(), ent.getY() - 2, ent.getZ(), 1, 2, 0, 0, 1, 1, true);
             }
+            // Primal Fear ESP
+            function highlightOwnedEntities(playerIGN, entityNames) {
+                if (ent.getName().removeFormatting().includes(`Spawned by: ${playerIGN}`)) {
+                    const allMatches = World.getAllEntities().filter(entity =>
+                        entityNames.some(name => entity.getName().includes(name))
+                    );
+                    if (!allMatches.length) return;
+
+                    const ownedEntity = allMatches.find(entity => entity.distanceTo(ent) < 1);
+                    if (ownedEntity) {
+                        RenderLib.drawEspBox(
+                            ent.getX(),
+                            ent.getY() - 1.7,
+                            ent.getZ(),
+                            1, 2,   // Width and height
+                            0.6, 0.5, 0.9, 1,  // RGBA color
+                            true   // Fill
+                        );
+                    }
+                }
+            }
+            const targetNames = [
+                "Primal Fear",
+                "Commitment Phobia",
+                "Darkness Shade",
+                "Deadline",
+                "Math Teacher",
+                "Public Speaking Demon",
+                "Vegan Crawler"
+            ];
+
+            highlightOwnedEntities(playerIGN, targetNames);
+
+
             
-            //Star Mob ESP
+            // if(ent.getName().removeFormatting().includes(`Spawned by: ${playerIGN}`)){
+            //     const primalFears = World.getAllEntities().filter(primal => primal.getName().includes("Primal Fear"))
+            //     if(!primalFears) return
+            //     const ownPrimalFear = primalFears.find(primal => primal.distanceTo(ent) < 1)
+            //     if(ownPrimalFear) RenderLib.drawEspBox(ent.getX(), ent.getY() - 1.7, ent.getZ(), 1, 2, 0.6, 0.5, 0.9, 1, true)
+            // }
+
+            // Star Mob ESP
             let mobName = ent.getName().removeFormatting() 
             let StarMobboxColor = RenderLibV2.getColor(settings().boxStarredMobColor);
             let FelBoxColor = RenderLibV2.getColor(settings().felboxcolor);
@@ -66,7 +108,7 @@ register("renderWorld", () => {
                 RenderLibV2.drawEspBoxV2(ent.getX(), ent.getY() - 2, ent.getZ(), 1, 2, 1, StarMobboxColor.red, StarMobboxColor.green, StarMobboxColor.blue, StarMobboxColor.alpha, true, 2);
             }
             
-            //Runic Mob ESP
+            // Runic Mob ESP
             if(ent.getName().includes("§5[") && !(ent.getName().includes("Dragon")) && settings().Runicmobesp){
                 RenderLib.drawEspBox(ent.getX(), ent.getY() - 1, ent.getZ(), 1, 1, 0, 1, 1, 1, true);
                 drawLine(Player.getRenderX(), playerY, Player.getRenderZ(), ent.getX(), ent.getY() - 1, ent.getZ(), 0, 1, 1, 1, 2);
@@ -77,7 +119,7 @@ register("renderWorld", () => {
                 RenderLibV2.drawEspBoxV2(ent.getX(), ent.getY() - 2, ent.getZ(), 1, 2, 1, SpiritBearColor.red, SpiritBearColor.green, SpiritBearColor.blue, SpiritBearColor.alpha, true, 2);
                 drawLine(Player.getRenderX(), playerY, Player.getRenderZ(), ent.getX(), ent.getY() - 1, ent.getZ(), SpiritBearColor.red, SpiritBearColor.green, SpiritBearColor.blue, SpiritBearColor.alpha, 2);
             }
-            //See runics in dungeons
+            // See runics in dungeons
             if (Dungeon.inDungeon && settings().Runicmobesp) {
                 const name = ent.getName();
                 if (name.includes("§5") && !name.includes("ᛤ") && !blacklist.some(word => name.includes(word))) {
@@ -97,26 +139,26 @@ register("renderWorld", () => {
                 }
 
             }
-            //Butterfly ESP
+            // Butterfly ESP
             if(ent.getName().includes("Butterfly") && settings().bfESP){
                 RenderLib.drawEspBox(ent.getX(), ent.getY() - 0.3, ent.getZ(), 0.6, 0.6, 0, 1, 1, 1, true);
                 drawLine(Player.getRenderX(), playerY, Player.getRenderZ(), ent.getX(), ent.getY() - 1, ent.getZ(), 0, 1, 1, 1, 2);
             }
-            //Goldin Goblin ESP
+            // Goldin Goblin ESP
             if(ent.getName().includes("Golden Goblin") && settings().ggESP){
                 RenderLib.drawEspBox(ent.getX(), ent.getY() - 2, ent.getZ(), 1, 2, 1, 1, 0, 1, true);
                 drawLine(Player.getRenderX(), playerY, Player.getRenderZ(), ent.getX(), ent.getY() - 1, ent.getZ(), 1, 1, 0, 1, 2);
             }
-            //Diamond Goblin ESP
+            // Diamond Goblin ESP
             if(ent.getName().includes("Diamond Goblin") && settings().dgESP){
                 RenderLib.drawEspBox(ent.getX(), ent.getY() - 2, ent.getZ(), 1, 2, 0, 1, 1, 1, true);
                 drawLine(Player.getRenderX(), playerY, Player.getRenderZ(), ent.getX(), ent.getY() - 1, ent.getZ(), 0, 1, 1, 1, 2);
             }
-            //Old Wolf ESP
+            // Old Wolf ESP
             if(ent.getName().includes("Old Wolf") && settings().oldwolfESP){
                 RenderLib.drawEspBox(ent.getX(), ent.getY() - 1, ent.getZ(), 1.3, 1, 0, 1, 1, 1, true);
             }
-            //Arcane ESP
+            // Arcane ESP
             if(ent.getName().includes("Arachne") && settings().arachneesp){
                 RenderLib.drawEspBox(ent.getX(), ent.getY() - 1, ent.getZ(), 1.5, 1, 0, 1, 1, 1, true);
                 drawLine(Player.getRenderX(), playerY, Player.getRenderZ(), ent.getX(), ent.getY() - 1, ent.getZ(), 0, 1, 1, 1, 2);
@@ -140,7 +182,7 @@ register("renderWorld", () => {
 
 })
 
-//player ESP
+// Player ESP
 register("renderWorld", () => {
     if (!settings().playeresp) return;
 
@@ -161,7 +203,7 @@ register("renderWorld", () => {
     });
 });
 
-//Rat ESP
+// Rat ESP
 register("renderWorld", () => {
  World.getAllEntities().forEach(ent => {
     if (ent.getClassName() == "EntityZombie" && settings().RatESP) {
