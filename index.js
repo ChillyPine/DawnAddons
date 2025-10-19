@@ -133,11 +133,11 @@ if (settings().showdebug) {
 // NOTIS
 import './features/Notifications/BonzoSpirtPhoenix';
 if (settings().showdebug) {
-    ChatLib.chat(Debuger + " &fImported Bonzo Spirt Phoeniz");
+    ChatLib.chat(Debuger + " &fImported Bonzo Spirt Phoenix");
 }
 import './features/Notifications/GoldenfishNotifier';
 if (settings().showdebug) {
-    ChatLib.chat(Debuger + " &fImported Golden Fish Noti");
+    ChatLib.chat(Debuger + " &fImported Golden Fish Notifs");
 }
 import './features/Notifications/Notifications';
 if (settings().showdebug) {
@@ -145,11 +145,15 @@ if (settings().showdebug) {
 }
 import './features/Notifications/VanquisherNotifier';
 if (settings().showdebug) {
-    ChatLib.chat(Debuger + " &fImported Vanq Notis");
+    ChatLib.chat(Debuger + " &fImported Vanq Notifs");
 }
 import './features/Notifications/WatcherNotifications';
 if (settings().showdebug) {
-    ChatLib.chat(Debuger + " &fImported Watcher Notis");
+    ChatLib.chat(Debuger + " &fImported Watcher Notifs");
+}
+import './features/Notifications/JerryNotifier';
+if (settings().showdebug) {
+    ChatLib.chat(Debuger + " &fImported Jerry Notifs");
 }
 import './features/Misc/Sounds'
 if (settings().showdebug) {

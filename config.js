@@ -590,13 +590,6 @@ const defaultConf = new DefaultConfig("DawnAddons", "data/settings.json")
     subcategory: "Dungeons"
 })
 .addSwitch({
-    category: "Notifications",
-    configName: "goldenfishdetect",
-    title: "Golden Fish Notification",
-    description: "Sends a chat message when a Golden Fish is spotted.",
-    subcategory: "Fishing"
-})
-.addSwitch({
     category: "Misc",
     configName: "inqdugup",
     title: "Send Message on Inquisitor",
@@ -871,6 +864,54 @@ const defaultConf = new DefaultConfig("DawnAddons", "data/settings.json")
     description: "Places a timer on your screen for rag axe cooldown.",
     subcategory: "Rag Axe"
 })
+.addSwitch({
+    category: "Notifications",
+    configName: "goldenfishdetect",
+    title: "Golden Fish Notification",
+    description: "Sends a chat message when a Golden Fish is spotted.",
+    subcategory: "Fishing"
+})
+// Begin Jerry Notifs
+.addSwitch({
+    category: "Notifications",
+    configName: "jerryNotif",
+    title: "Jerry Notifications",
+    description: "Sends a chat message when a Jerry spawns.",
+    subcategory: "Misc"
+})
+.addToggle({
+    category: "Notifications",
+    configName: "goldenJerry",
+    title: "Golden Jerry",
+    description: "",
+    subcategory: "Misc",
+    shouldShow(data){ return data.jerryNotif }
+})
+.addToggle({
+    category: "Notifications",
+    configName: "purpleJerry",
+    title: "Purple Jerry",
+    description: "",
+    subcategory: "Misc",
+    shouldShow(data){ return data.jerryNotif }
+})
+.addToggle({
+    category: "Notifications",
+    configName: "blueJerry",
+    title: "Blue Jerry",
+    description: "",
+    subcategory: "Misc",
+    shouldShow(data){ return data.jerryNotif }
+})
+.addToggle({
+    category: "Notifications",
+    configName: "greenJerry",
+    title: "Green Jerry",
+    description: "",
+    subcategory: "Misc",
+    shouldShow(data){ return data.jerryNotif }
+})
+// End Jerry Notifs
 .addSwitch({
     category: "ESPS",
     configName: "starmobesp",

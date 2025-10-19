@@ -294,11 +294,6 @@
             },
             {
                 "type": 6,
-                "name": "goldenfishdetect",
-                "value": false
-            },
-            {
-                "type": 6,
                 "name": "ragDetect",
                 "value": true
             },
@@ -331,6 +326,36 @@
                 "type": 6,
                 "name": "ragCoolDown",
                 "value": false
+            },
+            {
+                "type": 6,
+                "name": "goldenfishdetect",
+                "value": false
+            },
+            {
+                "type": 6,
+                "name": "jerryNotif",
+                "value": true
+            },
+            {
+                "type": 0,
+                "name": "goldenJerry",
+                "value": true
+            },
+            {
+                "type": 0,
+                "name": "purpleJerry",
+                "value": true
+            },
+            {
+                "type": 0,
+                "name": "blueJerry",
+                "value": true
+            },
+            {
+                "type": 0,
+                "name": "greenJerry",
+                "value": true
             }
         ]
     },
