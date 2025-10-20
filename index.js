@@ -155,6 +155,10 @@ import './features/Notifications/JerryNotifier';
 if (settings().showdebug) {
     ChatLib.chat(Debuger + " &fImported Jerry Notifs");
 }
+import './features/Notifications/PickaxeCooldown';
+if (settings().showdebug) {
+    ChatLib.chat(Debuger + " &fImported Pickaxe Cooldown");
+}
 import './features/Misc/Sounds'
 if (settings().showdebug) {
     ChatLib.chat(Debuger + " &fImported Sounds");

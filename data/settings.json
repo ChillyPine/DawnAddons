@@ -334,6 +334,11 @@
             },
             {
                 "type": 6,
+                "name": "pickCoolNotif",
+                "value": true
+            },
+            {
+                "type": 6,
                 "name": "jerryNotif",
                 "value": true
             },
@@ -345,17 +350,17 @@
             {
                 "type": 0,
                 "name": "purpleJerry",
-                "value": true
+                "value": false
             },
             {
                 "type": 0,
                 "name": "blueJerry",
-                "value": true
+                "value": false
             },
             {
                 "type": 0,
                 "name": "greenJerry",
-                "value": true
+                "value": false
             }
         ]
     },
@@ -440,7 +445,7 @@
             {
                 "type": 6,
                 "name": "pickHolder",
-                "value": true
+                "value": false
             },
             {
                 "type": 6,
@@ -527,6 +532,11 @@
                 "value": true
             },
             {
+                "type": 6,
+                "name": "amethystFinder",
+                "value": false
+            },
+            {
                 "type": 2,
                 "name": "instaBan"
             },
@@ -538,16 +548,6 @@
                 "type": 6,
                 "name": "showdebug",
                 "value": true
-            }
-        ]
-    },
-    {
-        "category": "Mining",
-        "settings": [
-            {
-                "type": 6,
-                "name": "amethystFinder",
-                "value": false
             }
         ]
     },
@@ -637,7 +637,7 @@
             {
                 "type": 6,
                 "name": "MatchoESP",
-                "value": false
+                "value": true
             },
             {
                 "type": 6,

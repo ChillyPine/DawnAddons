@@ -705,13 +705,6 @@ const defaultConf = new DefaultConfig("DawnAddons", "data/settings.json")
     shouldShow(data){ return data.sendvanqdead }
 })
 .addSwitch({
-    category: "Mining",
-    configName: "amethystFinder",
-    title: "Amethyst Crystal Finder",
-    description: "Upon using a Jungle Key, cheese coords will be sent in local chat.",
-    subcategory: "General"
-})
-.addSwitch({
     category: "Dungeons",
     configName: "detectplayersatcoords",
     title: "Positional Message &cW.I.P",
@@ -804,6 +797,13 @@ const defaultConf = new DefaultConfig("DawnAddons", "data/settings.json")
     subcategory: "The Great Spook"
 })
 .addSwitch({
+    category: "Misc",
+    configName: "amethystFinder",
+    title: "Amethyst Crystal Finder",
+    description: "Upon using a Jungle Key, cheese coords will be sent in local chat.",
+    subcategory: "Mining"
+})
+.addSwitch({
     category: "Notifications",
     configName: "ragDetect",
     title: "Rag Axe Display",
@@ -870,6 +870,13 @@ const defaultConf = new DefaultConfig("DawnAddons", "data/settings.json")
     title: "Golden Fish Notification",
     description: "Sends a chat message when a Golden Fish is spotted.",
     subcategory: "Fishing"
+})
+.addSwitch({
+    category: "Notifications",
+    configName: "pickCoolNotif",
+    title: "Pickaxe Cooldown Notification",
+    description: "Shows a title when your pickaxe ability is off cooldown.",
+    subcategory: "Misc"
 })
 // Begin Jerry Notifs
 .addSwitch({
@@ -1208,7 +1215,7 @@ const defaultConf = new DefaultConfig("DawnAddons", "data/settings.json")
 })
 
 //Declare categories and write settings file
-const categories = ["Dungeons", "Party Finder", "ESPS", "Mining", "Notifications", "! Commands", "Chat Blockers", "Misc"]
+const categories = ["Dungeons", "Party Finder", "ESPS", "Notifications", "! Commands", "Chat Blockers", "Misc"]
 const config = new Settings("DawnAddons", defaultConf, "data/ColorScheme.json")
     .setCategorySort((a, b) => categories.indexOf(a.category) - categories.indexOf(b.category))
     .setClickSound(() => {

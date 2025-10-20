@@ -9,7 +9,7 @@ register('chat', () => {
     }
 }).setCriteria("That chest is locked!");
 
-//Kicked Noti
+//Kicked Notif
 register('chat', () => {
     if (!settings().autonotikick) return
     setTimeout(() => {
