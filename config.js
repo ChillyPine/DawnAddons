@@ -44,7 +44,7 @@ const defaultConf = new DefaultConfig("DawnAddons", "data/settings.json")
     category: "Party Finder",
     configName: "blacklistIGN",
     title: "Shitter IGN",
-    description: "Put Shitters IGN in, seprate names with a space, not case sensitive.\nExample: Dawn joE Matt liLY\n/dawnhelp for all commands regarding shitter list",
+    description: "Put in Shitters IGN, separate names with a space. Not case sensitive.\nExample: Dawn joE Matt liLY\n/dawnhelp for all commands regarding shitter list.",
     value: "",
     placeHolder: "Input Here",
     subcategory: "Shitter List",
