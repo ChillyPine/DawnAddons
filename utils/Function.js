@@ -53,7 +53,7 @@ export function formatNumber(num, significantDigits = 5) {
     return formattedNumber;
   }
 
-
+// I don't think this does anything after the 
 export function checkBlacklist(player) {
     const blacklist_mode = config.blacklist;
     let lower_case_player_ign = player.toString().toLowerCase();

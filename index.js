@@ -3,12 +3,11 @@ import settings from "./config"
 register("command", (arg) => {
     if (arg === "help") {
         ChatLib.chat("&r&r&7&m----------------------------------------------------"); 
-        ChatLib.chat("&6/da &f: Opens gui");
-        ChatLib.chat("&6/shitteradd {IGN} &f: Adds a player to the shitter list");
-        ChatLib.chat("&6/shitterremove {IGN} &f: Removes a player from the shitter list");
-        ChatLib.chat("&6/showshitterlist &f: Displays shitter list");   
-        ChatLib.chat("&6/dawnaddons_shitterlist_reset &f: Removes every player on Shitter list");
-        ChatLib.chat("&6/dawn_reset &f: Removes all shown coords");
+        ChatLib.chat("&6/da&f: Opens the GUI");
+        ChatLib.chat("&6/shitter add {IGN}&f: Adds a player to the shitter list. You can add multiple at once by separating the IGNs with spaces.");
+        ChatLib.chat("&6/shitter remove {IGN}&f: Removes a player from the shitter list. You can remove multiple at once by separating the IGNs with spaces.");
+        ChatLib.chat("&6/shitter list&f: Displays the shitter list. Use /shitter list [#] to display a certain page.");   
+        ChatLib.chat("&6/shitter reset&f: Removes every player on the shitter list. It will ask you to confirm before resetting.");
         ChatLib.chat("&r&r&7&m-----------------------------------------------------");
     } else if (!arg) {
         return settings().getConfig().openGui();
@@ -16,7 +15,6 @@ register("command", (arg) => {
         ChatLib.chat("&5[Dawn&6Addons&5] &cError: Unknown command. Use &6/da help &cfor all commands.");
     }
 }).setName("da").setAliases(["dawn"]);
-
 
 
 const prefix = "&5[Dawn&6Addons&5]";

@@ -33,48 +33,48 @@ const defaultConf = new DefaultConfig("DawnAddons", "data/settings.json")
     description: "Shortens the party finder queue message.",
     subcategory: "General"
 })
-.addSwitch({
-    category: "Party Finder",
-    configName: "blacklist",
-    title: "Shitter List",
-    description: "",
-    subcategory: "Shitter List"
-})
-.addTextInput({
-    category: "Party Finder",
-    configName: "blacklistIGN",
-    title: "Shitter IGN",
-    description: "Put in Shitters IGN, separate names with a space. Not case sensitive.\nExample: Dawn joE Matt liLY\n/dawnhelp for all commands regarding shitter list.",
-    value: "",
-    placeHolder: "Input Here",
-    subcategory: "Shitter List",
-    shouldShow(data){ return data.blacklist }
-})
+// .addSwitch({
+//     category: "Party Finder",
+//     configName: "blacklist",
+//     title: "Shitter List",
+//     description: "",
+//     subcategory: "Shitter List"
+// })
+// .addTextInput({
+//     category: "Party Finder",
+//     configName: "blacklistIGN",
+//     title: "Shitter IGN",
+//     description: "Put in Shitters IGN, separate names with a space. Not case sensitive.\nExample: Dawn joE Matt liLY\n/dawnhelp for all commands regarding shitter list.",
+//     value: "",
+//     placeHolder: "Input Here",
+//     subcategory: "Shitter List",
+//     shouldShow(data){ return data.blacklist }
+// })
 .addSwitch({
     category: "Party Finder",
     configName: "kickNotWelcomePlayer",
     title: "Auto Kick Shitter",
     description: "Kicks the Shitter",
-    subcategory: "Shitter List",
-    shouldShow(data){ return data.blacklist }
+    subcategory: "Shitter List"
+    //shouldShow(data){ return data.blacklist }
 })
 .addSwitch({
     category: "Party Finder",
     configName: "anncshitter",
     title: "Announce to party",
-    description: "Sends a message in party chat that a shitter joined the ranks!",
-    subcategory: "Shitter List",
-    shouldShow(data){ return data.blacklist }
+    description: "Sends a message in party chat when a shitter joins the ranks!",
+    subcategory: "Shitter List"
+    //shouldShow(data){ return data.blacklist }
 })
 .addTextInput({
     category: "Party Finder",
     configName: "customShitterMessage",
     title: "Custom Shitter Message",
-    description: "Send a custom shitter message, use {player} for IGN\nYou must input a message for Announce Shitter to work in party chat",
+    description: "Send a custom message when a shitter joins the party. Use {player} to insert the player's IGN.\nYou &emust &rinput a message for Announce Shitter to work in party chat.",
     value: "",
     placeHolder: "Input Here",
     subcategory: "Shitter List",
-    shouldShow(data){ return data.anncshitter && data.blacklist }
+    shouldShow(data){ return data.anncshitter }
 })
 /*.addSwitch({
     category: "Party Finder",

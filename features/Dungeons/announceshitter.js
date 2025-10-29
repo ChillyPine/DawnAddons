@@ -1,49 +1,47 @@
 import settings from '../../config'
-import { getIGN, checkBlacklist } from "../../utils/Function";
+import { getIGN } from "../../utils/Function";
+import { shitterData } from '../../data/data';
 
-
-const prefix2 = "&5[Dawn&6Addons&5]";
-
+const prefix = "&5[Dawn&6Addons&5]";
 let ShitterMessage = "";
 
-//send to party
+// Check if player is in the blacklist
+function checkBlacklist(player) {
+    const blacklistArray = shitterData.blacklist || [];
+    const playerLower = player.toLowerCase();
+    return blacklistArray.some(name => name.toLowerCase() === playerLower);
+}
+
+// Send to party
 register('chat', (player) => {
     if (!settings().anncshitter) return;
     player = getIGN(player);
-
     if (!checkBlacklist(player)) return;
     
     ShitterMessage = settings().customShitterMessage.replace("{player}", player);
+    ChatLib.command(`pc ${ShitterMessage}`);
+}).setCriteria("Party Finder > ${player} joined the dungeon group! (${class} Level ${*})")
 
-    ChatLib.command(`pc ${ShitterMessage} `);
-
-}).setCriteria("Party Finder > ${player} joined the dungeon group! (${classs} Level ${*})")
-
-//Auto kick
+// Auto kick
 register('chat', (player) => {
     if (!settings().kickNotWelcomePlayer) return;
     player = getIGN(player);
-
     if (!checkBlacklist(player)) return;
         
     if (settings().kickNotWelcomePlayer) {
-    setTimeout(() => {
-        ChatLib.command(`p kick ${player}`);
-    }, 350);
+        setTimeout(() => {
+            ChatLib.command(`p kick ${player}`);
+        }, 350);
     }
-}).setCriteria("Party Finder > ${player} joined the dungeon group! (${classs} Level ${*})")
+}).setCriteria("Party Finder > ${player} joined the dungeon group! (${class} Level ${*})")
 
-//Scan players joining via not PF
+// Scan players joining via not PF
 register('chat', (player) => {
     if (!settings().anncshitter) return;
     player = getIGN(player);
-
     if (!checkBlacklist(player)) return;
-
     ShitterMessage = settings().customShitterMessage.replace("{player}", player);
-
     ChatLib.command(`pc ${ShitterMessage}`);
-
 }).setCriteria("${player} joined the party.");
 
 
@@ -77,5 +75,5 @@ register('chat', (player) => {
     setTimeout(() => {
         ChatLib.chat(createQuickPartyFinderActions(player));
     }, 100);
-}).setCriteria("Party Finder > ${player} joined the dungeon group! (${classs} Level ${*})")
+}).setCriteria("Party Finder > ${player} joined the dungeon group! (${class} Level ${*})")
 
