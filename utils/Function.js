@@ -53,43 +53,6 @@ export function formatNumber(num, significantDigits = 5) {
     return formattedNumber;
   }
 
-// I don't think this does anything after the shitter list update from 10/25.
-export function checkBlacklist(player) {
-    const blacklist_mode = config.blacklist;
-    let lower_case_player_ign = player.toString().toLowerCase();
-
-    if (blacklist_mode) {
-        let blacklist_ign = config.blacklistIGN.split(" ");
-        for (let a = 0; a < blacklist_ign.length; a++) {
-            if (lower_case_player_ign === blacklist_ign[a].toLowerCase()) {
-                setTimeout(() => {
-                    chatLib.chat('checking blacklist')
-                }, 50);
-                return true; // Player is on the blacklist
-            }
-        }
-    }
-    chatLib.chat('player is not on black list')
-    return false; // Player is not on the blacklist
-}
-
-
-export function getUniqueNumber(str) {
-    let hash = 0;
-    for (let i = 0; i < str.length; i++) {
-        hash = ((hash << 5) - hash) + str.charCodeAt(i);
-        hash |= 0;
-    }
-    return hash;
-}
-
-export function getUniqueValue(str) {
-    const uniqueNumber = getUniqueNumber(str);
-    const today = new Date().toISOString().substr(0, 10);
-    const hash = getUniqueNumber(today + uniqueNumber);
-    const value = Math.abs(hash % 101);
-    return value;
-}
 
 export function getIGN(player) {
     let player_ign = player;

@@ -1,4 +1,4 @@
-import { registerEventListener, updateEventListeners } from '../utils/EventListener';
+import { updateEventListeners } from '../utils/EventListener';
 
 let currentWorld = "Unknown";
 let currentZone = "Unknown";
