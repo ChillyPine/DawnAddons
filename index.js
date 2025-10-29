@@ -65,10 +65,6 @@ import './features/Dungeons/autokick';
 if (settings().showdebug) {
     ChatLib.chat(Debuger + " &fImported Auto Kick");
 }
-import './features/Dungeons/witherKey';
-if (settings().showdebug) {
-    ChatLib.chat(Debuger + " &fImported Wither Key ESP");
-}
 import './features/Dungeons/AtPLACE';
 if (settings().showdebug) {
     ChatLib.chat(Debuger + " &fImported At PLACE");
