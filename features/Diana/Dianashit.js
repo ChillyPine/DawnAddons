@@ -1,10 +1,8 @@
 import settings from '../../config'
 
-
-
 register("chat", () => {
-    if (!settings().daianinqmesage) return
-    ChatLib.command(`pc ${settings().daianinqmesage}`)
+    if (!settings().dianainqmessage) return
+    ChatLib.command(`pc ${settings().dianainqmessage}`)
 }).setCriteria("${*} You dug out a Minos Inquisitor!")
 
 

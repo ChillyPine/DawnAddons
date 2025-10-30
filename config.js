@@ -598,7 +598,7 @@ const defaultConf = new DefaultConfig("DawnAddons", "data/settings.json")
 })
 .addTextInput({
     category: "Misc",
-    configName: "dianainqmesage",
+    configName: "dianainqmessage",
     title: "Input message",
     description: "",
     value: "",

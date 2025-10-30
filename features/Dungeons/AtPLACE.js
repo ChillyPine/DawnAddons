@@ -128,10 +128,10 @@ register("worldUnload", () => {
     hasDetectedpurplepad = false;
 });
 
-register("tick", () => {
-    checkLocation();
+register("step", () => {
     resetFlags();
-});
+    checkLocation();
+}).setDelay(0.5);
 
 // settings() toggle if needed
 const checkEE2Players = true;

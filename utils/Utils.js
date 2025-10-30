@@ -1,4 +1,5 @@
 import { monthsShort } from "../../BloomCore/utils/Utils";
+import PogObject from "../../PogData";
 
 export const prefix = "&5[Dawn&6Addons&5] ";
 
@@ -22,54 +23,88 @@ export function timeConverter(UNIX_timestamp){
     return time;
 }
 
+// jsonFile
+export const getDataJson = new PogObject('UwUaddons', {
+    greetingMessages: {
+        messages: [
+        "Welcome {user}!",
+        "Hey {user}, isnt UwUaddons is the best!",
+        "Hello {user}!",
+        "What's up {user}",
+        "Hey {user}!",
+        "Hi {user}!",
+        "Yo {user}!"
+        ],
+        ignoredUsers: [
 
-// Useful Emojis Sorted by Attainment Mechanism
-// emojis: {
-//     mvp: {
-//         '<3': '❤',
-//         'o/': '( ﾟ◡ﾟ)/',
-//         ':star:': '✮',
-//         ':yes:': '✔',
-//         ':no:': '✖',
-//         ':java:': '☕',
-//         ':arrow:': '➜',
-//         ':shrug:': '¯\\_(\u30c4)_/¯',
-//         ':tableflip:': '(╯°□°）╯︵ ┻━┻',
-//         ':totem:': '☉_☉',
-//         ':typing:': '✎...',
-//         ':maths:': '√(π+x)=L',
-//         ':snail:': "@'-'",
-//         ':thinking:': '(0.o?)',
-//         ':gimme:': '༼つ◕_◕༽つ',
-//         ':wizard:': '(\' - \')⊃━☆ﾟ.*･｡ﾟ',
-//         ':pvp:': '⚔',
-//         ':peace:': '✌',
-//         ':puffer:': "<('O')>"
-//     },
-//     gift: {
-//         ':dab:': '<o/',
-//         'h/': 'ヽ(^◇^*)/',
-//         ':dog:': '(ᵔᴥᵔ)',
-//         ':yey:': 'ヽ (◕◡◕) ﾉ',
-//         ':cat:': '= ＾● ⋏ ●＾ =',
-//         ':cute:': '(✿◠‿◠)',
-//         ':snow:': '☃',
-//         ':sloth:': '(・⊝・)',
-//         ':dj:': 'ヽ(⌐■_■)ノ♬'
-//     },
-//     emojis_custom: {
-//         ':skull:': '☠',
-//         ':wheelchair:': '♿',
-//         ':wc:': '♿',
-//         ':caution:': '⚠',
-//         ':warning:': '⚠',
-//         ':explosion:': '✳',
-//         ':biohazard:': '☣',
-//         ':)': 'Â',
-//         '0_0': '☉_☉',
-//         ':!!:': '‼',
-//         ':!?:': '⁉'
-//     }
+        ],
+        currentIndex: -1
+    },
+    emojis: {
+        mvp: {
+            '<3': '❤',
+            'o/': '( ﾟ◡ﾟ)/',
+            ':star:': '✮',
+            ':yes:': '✔',
+            ':no:': '✖',
+            ':java:': '☕',
+            ':arrow:': '➜',
+            ':shrug:': '¯\\_(\u30c4)_/¯',
+            ':tableflip:': '(╯°□°）╯︵ ┻━┻',
+            ':totem:': '☉_☉',
+            ':typing:': '✎...',
+            ':maths:': '√(π+x)=L',
+            ':snail:': "@'-'",
+            ':thinking:': '(0.o?)',
+            ':gimme:': '༼つ◕_◕༽つ',
+            ':wizard:': '(\' - \')⊃━☆ﾟ.*･｡ﾟ',
+            ':pvp:': '⚔',
+            ':peace:': '✌',
+            ':puffer:': "<('O')>"
+        },
+        gift: {
+            ':dab:': '<o/',
+            'h/': 'ヽ(^◇^*)/',
+            ':dog:': '(ᵔᴥᵔ)',
+            ':yey:': 'ヽ (◕◡◕) ﾉ',
+            ':cat:': '= ＾● ⋏ ●＾ =',
+            ':cute:': '(✿◠‿◠)',
+            ':snow:': '☃',
+            ':sloth:': '(・⊝・)',
+            ':dj:': 'ヽ(⌐■_■)ノ♬'
+        },
+        emojis_custom: {
+            ':skull:': '☠',
+            ':wheelchair:': '♿',
+            ':wc:': '♿',
+            ':caution:': '⚠',
+            ':warning:': '⚠',
+            ':explosion:': '✳',
+            ':biohazard:': '☣',
+            ':)': 'Â',
+            '0_0': '☉_☉',
+            ':!!:': '‼',
+            ':!?:': '⁉'
+        }
+    },
+    data: {
+        firstLoad: true,
+        simonSaysPB: 0,
+        last_version: undefined
+    },
+    guiLocs: {
+        pre4Status: {
+            "x": 0.0,
+            "y": 0.0,
+            "scale": 1
+        },
+        carryCount: {
+            "x": 0.0,
+            "y": 0.0,
+            "scale": 1
+        }
+    }
+}, "data.json") 
 
 export function timeDifference(current, previous) {
     var msPerMinute = 60 * 1000;
