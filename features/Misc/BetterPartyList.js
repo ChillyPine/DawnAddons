@@ -21,7 +21,7 @@ function createActionButtons(player) {
             .setHover("show_text", `&4Block &b${player}`),
         "&7❘ ",
         new TextComponent(settings().showmorepllist ? "&d[SL]" : "&d[Shitterlist]")
-            .setClick("run_command", `/shitteradd ${player}`)
+            .setClick("run_command", `/shitter add ${player}`)
             .setHover("show_text", `&dAdd &b${player} &dto Shitter List`)
 
     ];
