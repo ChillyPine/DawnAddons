@@ -235,6 +235,29 @@ const defaultConf = new DefaultConfig("DawnAddons", "data/settings.json")
 })
 .addSwitch({
     category: "Dungeons",
+    configName: "hideLividNameTags",
+    title: "Hide Incorrect Livid Nametags",
+    description: "",
+    subcategory: "General"
+})
+.addSwitch({
+    category: "Dungeons",
+    configName: "lividNameGUI",
+    title: "Render Livid HP",
+    description: "Creates a moveable HUD element with the correct Livid's color and health.",
+    subcategory: "General"
+})
+.addButton({
+    category: "Dungeons",
+    configName: "moveLividGUI",
+    title: "Move Livid HP Display",
+    description: "",
+    subcategory: "General",
+    onClick: () => ChatLib.command("lividgui", true),
+    shouldShow(data){ return data.lividNameGUI }
+})
+.addSwitch({
+    category: "Dungeons",
     configName: "KEYESP",
     title: "Wither / Blood Key ESP",
     description: "Highlights Wither and Blood Keys",
@@ -990,6 +1013,22 @@ const defaultConf = new DefaultConfig("DawnAddons", "data/settings.json")
     value: [255, 255, 255, 255],
     subcategory: "Dungeons",
     shouldShow(data){ return data.spiritbearesp }
+})
+.addSwitch({
+    category: "ESPS",
+    configName: "lividSolver",
+    title: "Livid ESP",
+    description: "",
+    subcategory: "Dungeons"
+})
+.addColorPicker({
+    category: "ESPS",
+    configName: "lividBoxColor",
+    title: "Livid Color",
+    description: "",
+    value: [255, 255, 255, 255],
+    subcategory: "Dungeons",
+    shouldShow(data){ return data.lividSolver }
 })
 .addSwitch({
     category: "ESPS",

@@ -101,6 +101,10 @@ import './features/Dungeons/BoxSA'
 if (settings().showdebug) {
     ChatLib.chat(Debuger + " &fImported BoxSA")
 }
+import './features/Dungeons/lividUtils'
+if (settings().showdebug) {
+    ChatLib.chat(Debuger + " &fImported Livid Utils")
+}
 
 // MISC
 import './features/Diana/Dianashit';
