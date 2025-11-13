@@ -1065,33 +1065,33 @@ const defaultConf = new DefaultConfig("DawnAddons", "data/settings.json")
     description: "",
     subcategory: "General"
 })
-.addSwitch({
-    category: "ESPS",
-    configName: "playeresp",
-    title: "Player ESP",
-    description: "",
-    subcategory: "Players"
-})
-.addDropDown({
-    category: "ESPS",
-    configName: "playerespmode",
-    title: "Player ESP Mode",
-    description: "",
-    options: ["All Players", "Specific Players"],
-    value: 0,
-    subcategory: "Players",
-    shouldShow(data){ return data.playeresp }
-})
-.addTextInput({
-    category: "ESPS",
-    configName: "playerespwhitelist",
-    title: "Player ESP List",
-    description: "Searches for & boxes specified players. Enter names separated by a space.",
-    value: "",
-    placeHolder: "Input Here",
-    subcategory: "Players",
-    shouldShow(data){ return data.playeresp && data.playerespmode === 1 }
-})
+// .addSwitch({
+//     category: "ESPS",
+//     configName: "playeresp",
+//     title: "Player ESP",
+//     description: "",
+//     subcategory: "Players"
+// })
+// .addDropDown({
+//     category: "ESPS",
+//     configName: "playerespmode",
+//     title: "Player ESP Mode",
+//     description: "",
+//     options: ["All Players", "Specific Players"],
+//     value: 0,
+//     subcategory: "Players",
+//     shouldShow(data){ return data.playeresp }
+// })
+// .addTextInput({
+//     category: "ESPS",
+//     configName: "playerespwhitelist",
+//     title: "Player ESP List",
+//     description: "Searches for & boxes specified players. Enter names separated by a space.",
+//     value: "",
+//     placeHolder: "Input Here",
+//     subcategory: "Players",
+//     shouldShow(data){ return data.playeresp && data.playerespmode === 1 }
+// })
 .addSwitch({
     category: "ESPS",
     configName: "trapperesp",
