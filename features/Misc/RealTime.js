@@ -3,10 +3,10 @@ import PogObject from "PogData"
 import { DraggableGui } from "../../../Atomx/draggable/DraggableGui"
 
 // Clock position + scale storage
-const data = new PogObject("timegui", {
+const data = new PogObject("DawnAddons", {
     pos: { x: 0, y: 0, scale: 1 },
     firstdownload: true
-})
+}, "data/timeHUD.json")
 
 // Create the draggable GUI
 const editGui = new DraggableGui(data, data.pos).setCommand("timegui")
