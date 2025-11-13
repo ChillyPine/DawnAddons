@@ -18,3 +18,19 @@ export const shitterData = {
         // No-op since setter already saves, but kept for compatibility
     }
 }
+
+// // For specific player ESP
+// export const playerESPData = {
+//     get playerWhitelist() {
+//         const data = dataStore.fromFile("playerESP.json", true)
+//         return data.playerWhitelist || []
+//     },
+    
+//     set blacklist(value) {
+//         dataStore.saveTo("playerESP.json", { playerWhitelist: value })
+//     },
+    
+//     save() {
+//         // No-op since setter already saves, but kept for compatibility
+//     }
+// }
