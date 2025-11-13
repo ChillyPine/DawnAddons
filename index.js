@@ -213,7 +213,7 @@ if (settings().showdebug) {
 //The below message lists all currently disabled modules/features. 
 // `(config)` indicates that it's been disabled in config.js, `(index)` indicates that it's been disabled in index.js, and `(.js)` indicates that it's been disabled in the actual code.
 if (settings().showdebug) {
-    ChatLib.chat(Debuger + " &r&lCurrently Disabled Features: &c&lWaypoint Creator (index)&r&l, &r&c&lParty Finder Stats + All Dependencies (config)&r&l, &r&c&lMute Message Chat Blocker (config, .js), &r&c&lLivid HP HUD (config, .js)")
+    ChatLib.chat(Debuger + " &r&lCurrently Disabled Features: &c&lWaypoint Creator (index)&r&l, &r&c&lParty Finder Stats + All Dependencies (config)&r&l, &r&c&lMute Message Chat Blocker (config, .js), &r&c&lLivid HP HUD (config, .js), &r&c&lPlayer ESP (config, .js)")
 }
 ChatLib.chat(prefix + " &fInitializing &aComplete");
 //;)
