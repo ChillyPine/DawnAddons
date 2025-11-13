@@ -240,22 +240,22 @@ const defaultConf = new DefaultConfig("DawnAddons", "data/settings.json")
     description: "",
     subcategory: "General"
 })
-.addSwitch({
-    category: "Dungeons",
-    configName: "lividNameGUI",
-    title: "Render Livid HP",
-    description: "Creates a moveable HUD element with the correct Livid's color and health.",
-    subcategory: "General"
-})
-.addButton({
-    category: "Dungeons",
-    configName: "moveLividGUI",
-    title: "Move Livid HP Display",
-    description: "",
-    subcategory: "General",
-    onClick: () => ChatLib.command("lividgui", true),
-    shouldShow(data){ return data.lividNameGUI }
-})
+// .addSwitch({
+//     category: "Dungeons",
+//     configName: "lividNameGUI",
+//     title: "Render Livid HP",
+//     description: "Creates a moveable HUD element with the correct Livid's color and health.",
+//     subcategory: "General"
+// })
+// .addButton({
+//     category: "Dungeons",
+//     configName: "moveLividGUI",
+//     title: "Move Livid HP Display",
+//     description: "",
+//     subcategory: "General",
+//     onClick: () => ChatLib.command("lividgui", true),
+//     shouldShow(data){ return data.lividNameGUI }
+// })
 .addSwitch({
     category: "Dungeons",
     configName: "KEYESP",

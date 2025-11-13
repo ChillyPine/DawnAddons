@@ -3,13 +3,13 @@ import settings from '../../config'
 import RenderLibV2 from '../../../RenderLibV2/index'
 import { DraggableGui } from "../../../Atomx/draggable/DraggableGui"
 
-// Livid HUD position + scale storage
-const data = new PogObject("lividHUD", {
-    pos: { x: 6, y: 6, scale: 1 }
-}, "data/lividHUD.json");
+// // Livid HUD position + scale storage
+// const data = new PogObject("DawnAddons", {
+//     pos: { x: 6, y: 6, scale: 1 }
+// }, "data/lividHUD.json");
 
-// Create the draggable GUI
-const editGui = new DraggableGui(data, data.pos).setCommand("lividgui")
+// // Create the draggable GUI
+// const editGui = new DraggableGui(data, data.pos).setCommand("lividgui")
 
 const numToLivid = {
     0: { "color": "§f", "name": "Vendetta Livid" },
@@ -30,59 +30,65 @@ let trueLividName = null;
 let trueLividEntity = null;
 let trueLividNameTag = null;
 
-// Regular overlay render
-register("renderOverlay", () => {
-    if (!settings().lividNameGUI || editGui.isOpen()) return;
+// Regular overlay render - HUD display feature
+// register("renderOverlay", () => {
+//     if (!settings().lividNameGUI || editGui.isOpen()) return;
     
-    if (trueLividNameTag !== null) {
-        let entityName = trueLividNameTag.getName();
-        if (entityName.includes("Livid") && entityName.length > 5 && entityName.charAt(1) === entityName.charAt(5) && entityName.startsWith(trueLividColor)) {
-            Renderer.retainTransforms(true)
-            Renderer.translate(editGui.getX(), editGui.getY())
-            Renderer.scale(editGui.getScale())
-            Renderer.drawStringWithShadow(entityName, 0, 0)
-            Renderer.retainTransforms(false)
-            Renderer.finishDraw()
-        }
-    }
-});
+//     if (trueLividNameTag !== null) {
+//         let entityName = trueLividNameTag.getName();
+//         Renderer.retainTransforms(true)
+//         Renderer.translate(editGui.getX(), editGui.getY())
+//         Renderer.scale(editGui.getScale())
+//         Renderer.drawStringWithShadow(entityName, 0, 0)
+//         Renderer.retainTransforms(false)
+//         Renderer.finishDraw()
+//     }
+// });
 
-// Render while in GUI edit mode
-editGui.onRender(() => {
-    if (trueLividNameTag !== null) {
-        let entityName = trueLividNameTag.getName();
-        if (entityName.includes("Livid") && entityName.length > 5 && entityName.charAt(1) === entityName.charAt(5) && entityName.startsWith(trueLividColor)) {
-            Renderer.retainTransforms(true)
-            Renderer.translate(editGui.getX(), editGui.getY())
-            Renderer.scale(editGui.getScale())
-            Renderer.drawStringWithShadow(entityName, 0, 0)
-            Renderer.retainTransforms(false)
-            Renderer.finishDraw()
-        }
-    } else {
-        // Show example text when editing and no livid is found
-        Renderer.retainTransforms(true)
-        Renderer.translate(editGui.getX(), editGui.getY())
-        Renderer.scale(editGui.getScale())
-        Renderer.drawStringWithShadow("§e﴾ §c§lLivid§r §a7M§c❤ §e﴿", 0, 0)
-        Renderer.retainTransforms(false)
-        Renderer.finishDraw()
-    }
-});
+// let entityName = null
+// register("renderOverlay", () => {
+//     if (!settings().lividNameGUI || editGui.isOpen()) return;
+//     if (trueLividNameTag !== null) {
+//         entityName = trueLividNameTag.getName()
+//     }
+// })
 
-// Hide incorrect livid name tags
+// // Render while in GUI edit mode
+// editGui.onRender(() => {
+//     if (trueLividNameTag !== null) {
+//         Renderer.retainTransforms(true)
+//         Renderer.translate(editGui.getX(), editGui.getY())
+//         Renderer.scale(editGui.getScale())
+//         Renderer.drawStringWithShadow(entityName, 0, 0)
+//         Renderer.retainTransforms(false)
+//         Renderer.finishDraw()
+//     } else {
+//         // Show example text when editing and no livid is found
+//         Renderer.retainTransforms(true)
+//         Renderer.translate(editGui.getX(), editGui.getY())
+//         Renderer.scale(editGui.getScale())
+//         Renderer.drawStringWithShadow("§e﴾ §c§lLivid§r §a7M§c❤ §e﴿", 0, 0)
+//         Renderer.retainTransforms(false)
+//         Renderer.finishDraw()
+//     }
+// });
+
+// Hide incorrect livid name tags - independent feature
 register("renderEntity", (entity, position, partialTicks, event) => {
     if (!settings().hideLividNameTags) return;
+    if (trueLividColor === null) return;
+    
+    // Only hide armor stands (nametags), not the actual Livid mob
+    if (entity.getClassName() !== "EntityArmorStand") return;
     
     let entityName = entity.getName();
-    if (trueLividNameTag !== null) {
-        if (entityName.removeFormatting().includes("Livid") && entityName.length > 5 && entityName.charAt(1) === entityName.charAt(5) && !entityName.startsWith(trueLividColor)) {
-            cancel(event);
-        }
+    // If it's a Livid entity but doesn't have the correct color, hide it
+    if (entityName.includes("Livid") && !entityName.startsWith(trueLividColor)) {
+        cancel(event);
     }
 });
 
-// Draw outline around correct livid
+// Draw outline around correct livid - independent feature (ESP)
 register("renderWorld", (partialTicks) => {
     if (!settings().lividSolver) return;
     
@@ -114,9 +120,9 @@ register("worldLoad", () => {
     bossStarted = false;
 });
 
-// Check for correct livid every tick
+// Check for correct livid every tick - runs if ANY feature is enabled
 register("tick", () => {
-    if (settings().lividSolver) {
+    if (settings().lividSolver || settings().hideLividNameTags || settings().lividNameGUI) {
         findCorrectLivid();
     }
 });
@@ -128,9 +134,8 @@ register("chat", () => {
     }
 }).setChatCriteria("[BOSS] Livid: I respect you for making it to here, but I'll be your undoing.");
 
-// Find correct livid
+// Find correct livid - shared detection logic
 function findCorrectLivid() {
-    if (!settings().lividSolver) return;
     if (inDungeon() != 5) return;
     
     let lividArr = [];
@@ -166,10 +171,12 @@ function findCorrectLivid() {
     if (allLividFound) {
         World.getAllEntities().forEach(entity => {
             let entityName = entity.getName();
+            // Find the nametag entity (for HUD display)
             if (entityName.includes("Livid") && entityName.length > 5 && entityName.charAt(1) === entityName.charAt(5) && entityName.startsWith(trueLividColor)) {
                 trueLividNameTag = entity;
             }
-            if (entityName.includes("Livid") && entityName.removeFormatting().includes(trueLividName) && entity.getClassName() === "EntityOtherPlayerMP") {
+            // Find the actual livid entity (for ESP box)
+            if (entityName.removeFormatting().includes(trueLividName) && entity.getClassName() === "EntityOtherPlayerMP") {
                 trueLividEntity = entity;
             }
         });
