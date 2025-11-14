@@ -4,11 +4,22 @@ register("command", (arg) => {
     if (arg === "help") {
         ChatLib.chat("&r&r&7&m----------------------------------------------------"); 
         ChatLib.chat("&6/da&f: Opens the GUI");
+        ChatLib.chat("&r&r&5&m----------------------------------------------------");
+        ChatLib.chat("&r&r&6 Shitter List Commands"); 
+        ChatLib.chat("&r&r&5&m----------------------------------------------------");
         ChatLib.chat("&6/shitter add {IGN}&f: Adds a player to the shitter list. You can add multiple at once by separating the IGNs with spaces.");
         ChatLib.chat("&6/shitter remove {IGN}&f: Removes a player from the shitter list. You can remove multiple at once by separating the IGNs with spaces.");
         ChatLib.chat("&6/shitter list&f: Displays the shitter list. Use /shitter list [#] to display a certain page.");   
         ChatLib.chat("&6/shitter reset&f: Removes every player on the shitter list. It will ask you to confirm before resetting.");
+        ChatLib.chat("&r&r&5&m----------------------------------------------------");
+        ChatLib.chat("&r&r&6 Player ESP List Commands"); 
+        ChatLib.chat("&r&r&5&m----------------------------------------------------");
+        ChatLib.chat("&6/espwhitelist add {IGN}&f: Highlights this Player");
+        ChatLib.chat("&6/espwhitelist remove {IGN}&f: Stops Highlighting this player");
+        ChatLib.chat("&6/espwhitelist list&f: Displays all Players DA is activily looking for");   
+        ChatLib.chat("&6/espwhitelist reset&f: Stops Highlighting ALL players on the list");
         ChatLib.chat("&r&r&7&m-----------------------------------------------------");
+
     } else if (!arg) {
         return settings().getConfig().openGui();
     } else {
@@ -208,6 +219,10 @@ if (settings().showdebug) {
 import './features/Misc/pickobulusBlocker'
 if (settings().showdebug) {
     ChatLib.chat(Debuger + " &fImported Pickobulous Blocker")
+}
+import './features/Misc/PlayerESP'
+if (settings().showdebug) {
+    ChatLib.chat(Debuger + " &fImported Player ESP")
 }
 
 //The below message lists all currently disabled modules/features. 

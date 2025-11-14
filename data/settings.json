@@ -20,12 +20,17 @@
             {
                 "type": 6,
                 "name": "hidedoors",
+                "value": true
+            },
+            {
+                "type": 6,
+                "name": "hideLividNameTags",
                 "value": false
             },
             {
                 "type": 6,
                 "name": "KEYESP",
-                "value": false
+                "value": true
             },
             {
                 "type": 6,
@@ -35,12 +40,12 @@
             {
                 "type": 6,
                 "name": "CrystalHolder",
-                "value": false
+                "value": true
             },
             {
                 "type": 6,
                 "name": "stormbox",
-                "value": false
+                "value": true
             },
             {
                 "type": 5,
@@ -55,15 +60,15 @@
             {
                 "type": 6,
                 "name": "golderbox",
-                "value": false
+                "value": true
             },
             {
                 "type": 5,
                 "name": "golderboxcolor",
                 "value": [
-                    255,
-                    16,
-                    51,
+                    73,
+                    90,
+                    247,
                     255
                 ]
             },
@@ -80,7 +85,7 @@
             {
                 "type": 6,
                 "name": "RelicHolder",
-                "value": false
+                "value": true
             },
             {
                 "type": 6,
@@ -95,12 +100,12 @@
             {
                 "type": 6,
                 "name": "endrunmusic",
-                "value": false
+                "value": true
             },
             {
                 "type": 6,
                 "name": "simonsaystime",
-                "value": false
+                "value": true
             },
             {
                 "type": 6,
@@ -110,7 +115,7 @@
             {
                 "type": 6,
                 "name": "watcheryaphider",
-                "value": false
+                "value": true
             },
             {
                 "type": 6,
@@ -125,7 +130,7 @@
             {
                 "type": 6,
                 "name": "atsimonsays",
-                "value": true
+                "value": false
             },
             {
                 "type": 6,
@@ -165,12 +170,12 @@
             {
                 "type": 6,
                 "name": "quickpartyact",
-                "value": false
+                "value": true
             },
             {
                 "type": 6,
                 "name": "shortPF",
-                "value": false
+                "value": true
             },
             {
                 "type": 6,
@@ -180,12 +185,12 @@
             {
                 "type": 6,
                 "name": "anncshitter",
-                "value": false
+                "value": true
             },
             {
                 "type": 4,
                 "name": "customShitterMessage",
-                "value": "Fuckahh {player} joined the party rip bozo L"
+                "value": ""
             },
             {
                 "type": 6,
@@ -215,172 +220,12 @@
         ]
     },
     {
-        "category": "ESPS",
-        "settings": [
-            {
-                "type": 6,
-                "name": "starmobesp",
-                "value": false
-            },
-            {
-                "type": 5,
-                "name": "boxStarredMobColor",
-                "value": [
-                    201,
-                    190,
-                    9,
-                    255
-                ]
-            },
-            {
-                "type": 5,
-                "name": "felboxcolor",
-                "value": [
-                    117,
-                    25,
-                    215,
-                    255
-                ]
-            },
-            {
-                "type": 6,
-                "name": "boxsa",
-                "value": false
-            },
-            {
-                "type": 6,
-                "name": "batesp",
-                "value": false
-            },
-            {
-                "type": 6,
-                "name": "batesptracer",
-                "value": false
-            },
-            {
-                "type": 5,
-                "name": "batespcolor",
-                "value": [
-                    18,
-                    221,
-                    199,
-                    255
-                ]
-            },
-            {
-                "type": 6,
-                "name": "spiritbearesp",
-                "value": false
-            },
-            {
-                "type": 5,
-                "name": "spiritbearespcolor",
-                "value": [
-                    34,
-                    221,
-                    38,
-                    255
-                ]
-            },
-            {
-                "type": 6,
-                "name": "Runicmobesp",
-                "value": false
-            },
-            {
-                "type": 6,
-                "name": "arachneesp",
-                "value": false
-            },
-            {
-                "type": 6,
-                "name": "RatESP",
-                "value": false
-            },
-            {
-                "type": 6,
-                "name": "MatchoESP",
-                "value": false
-            },
-            {
-                "type": 6,
-                "name": "PrimalFearESP",
-                "value": false
-            },
-            {
-                "type": 6,
-                "name": "playeresp",
-                "value": false
-            },
-            {
-                "type": 7,
-                "name": "playerespmode",
-                "value": 0
-            },
-            {
-                "type": 4,
-                "name": "playerespwhitelist",
-                "value": ""
-            },
-            {
-                "type": 6,
-                "name": "trapperesp",
-                "value": false
-            },
-            {
-                "type": 1,
-                "name": "trapperscansize",
-                "value": 10
-            },
-            {
-                "type": 6,
-                "name": "coreESP",
-                "value": false
-            },
-            {
-                "type": 6,
-                "name": "KeyGESP",
-                "value": false
-            },
-            {
-                "type": 6,
-                "name": "bfESP",
-                "value": false
-            },
-            {
-                "type": 6,
-                "name": "ggESP",
-                "value": false
-            },
-            {
-                "type": 6,
-                "name": "dgESP",
-                "value": false
-            },
-            {
-                "type": 6,
-                "name": "oldwolfESP",
-                "value": false
-            },
-            {
-                "type": 6,
-                "name": "GiftESP",
-                "value": false
-            },
-            {
-                "type": 6,
-                "name": "femboyESP",
-                "value": false
-            }
-        ]
-    },
-    {
         "category": "Notifications",
         "settings": [
             {
                 "type": 6,
                 "name": "BSPM",
-                "value": false
+                "value": true
             },
             {
                 "type": 6,
@@ -390,17 +235,17 @@
             {
                 "type": 6,
                 "name": "watchernoti",
-                "value": false
+                "value": true
             },
             {
                 "type": 6,
                 "name": "bloodDoneParty",
-                "value": true
+                "value": false
             },
             {
                 "type": 6,
                 "name": "diaskipnoti",
-                "value": true
+                "value": false
             },
             {
                 "type": 6,
@@ -410,7 +255,7 @@
             {
                 "type": 6,
                 "name": "bloodroomfull",
-                "value": true
+                "value": false
             },
             {
                 "type": 6,
@@ -420,7 +265,7 @@
             {
                 "type": 6,
                 "name": "lockedchestnoti",
-                "value": false
+                "value": true
             },
             {
                 "type": 6,
@@ -435,22 +280,22 @@
             {
                 "type": 6,
                 "name": "BottleFullNoti",
-                "value": false
+                "value": true
             },
             {
                 "type": 6,
                 "name": "ArrowNotif",
-                "value": false
+                "value": true
             },
             {
                 "type": 6,
                 "name": "ragDetect",
-                "value": false
+                "value": true
             },
             {
                 "type": 1,
                 "name": "ragaxediaplytime",
-                "value": 38
+                "value": 20
             },
             {
                 "type": 7,
@@ -465,7 +310,7 @@
             {
                 "type": 6,
                 "name": "customragsound",
-                "value": false
+                "value": true
             },
             {
                 "type": 4,
@@ -475,7 +320,7 @@
             {
                 "type": 6,
                 "name": "ragCoolDown",
-                "value": false
+                "value": true
             },
             {
                 "type": 6,
@@ -495,7 +340,7 @@
             {
                 "type": 0,
                 "name": "goldenJerry",
-                "value": true
+                "value": false
             },
             {
                 "type": 0,
@@ -530,27 +375,27 @@
             {
                 "type": 6,
                 "name": "coinflip",
-                "value": false
+                "value": true
             },
             {
                 "type": 6,
                 "name": "roll",
-                "value": false
+                "value": true
             },
             {
                 "type": 6,
                 "name": "eightball",
-                "value": false
+                "value": true
             },
             {
                 "type": 6,
                 "name": "insult",
-                "value": false
+                "value": true
             },
             {
                 "type": 6,
                 "name": "TPScheck",
-                "value": false
+                "value": true
             },
             {
                 "type": 6,
@@ -570,52 +415,17 @@
         ]
     },
     {
-        "category": "Chat Blockers",
-        "settings": [
-            {
-                "type": 6,
-                "name": "blockBINTW",
-                "value": false
-            },
-            {
-                "type": 6,
-                "name": "BlockGUILDEXP",
-                "value": false
-            },
-            {
-                "type": 6,
-                "name": "hideprofileid",
-                "value": false
-            },
-            {
-                "type": 6,
-                "name": "hideprofilemsg",
-                "value": false
-            },
-            {
-                "type": 6,
-                "name": "LotteryMsg",
-                "value": false
-            },
-            {
-                "type": 6,
-                "name": "LinkWarningMsg",
-                "value": false
-            }
-        ]
-    },
-    {
         "category": "Misc",
         "settings": [
             {
                 "type": 6,
                 "name": "BetterPL",
-                "value": false
+                "value": true
             },
             {
                 "type": 6,
                 "name": "showmorepllist",
-                "value": true
+                "value": false
             },
             {
                 "type": 6,
@@ -635,12 +445,12 @@
             {
                 "type": 6,
                 "name": "showIRLtime",
-                "value": false
+                "value": true
             },
             {
                 "type": 7,
                 "name": "clockcolor",
-                "value": 15
+                "value": 5
             },
             {
                 "type": 2,
@@ -649,12 +459,12 @@
             {
                 "type": 6,
                 "name": "etherwarpding",
-                "value": false
+                "value": true
             },
             {
                 "type": 4,
                 "name": "etherwarpsoundsreplacment",
-                "value": "note.bass"
+                "value": "note.harp"
             },
             {
                 "type": 6,
@@ -663,7 +473,7 @@
             },
             {
                 "type": 4,
-                "name": "dianainqmesage",
+                "name": "dianainqmessage",
                 "value": ""
             },
             {
@@ -732,7 +542,212 @@
             {
                 "type": 6,
                 "name": "showdebug",
+                "value": true
+            }
+        ]
+    },
+    {
+        "category": "ESPS",
+        "settings": [
+            {
+                "type": 6,
+                "name": "starmobesp",
+                "value": true
+            },
+            {
+                "type": 5,
+                "name": "boxStarredMobColor",
+                "value": [
+                    184,
+                    15,
+                    235,
+                    255
+                ]
+            },
+            {
+                "type": 5,
+                "name": "felboxcolor",
+                "value": [
+                    0,
+                    117,
+                    255,
+                    255
+                ]
+            },
+            {
+                "type": 6,
+                "name": "boxsa",
+                "value": true
+            },
+            {
+                "type": 6,
+                "name": "batesp",
+                "value": true
+            },
+            {
+                "type": 6,
+                "name": "batesptracer",
                 "value": false
+            },
+            {
+                "type": 5,
+                "name": "batespcolor",
+                "value": [
+                    227,
+                    160,
+                    67,
+                    255
+                ]
+            },
+            {
+                "type": 6,
+                "name": "spiritbearesp",
+                "value": false
+            },
+            {
+                "type": 5,
+                "name": "spiritbearespcolor",
+                "value": [
+                    34,
+                    221,
+                    38,
+                    255
+                ]
+            },
+            {
+                "type": 6,
+                "name": "lividSolver",
+                "value": false
+            },
+            {
+                "type": 5,
+                "name": "lividBoxColor",
+                "value": [
+                    255,
+                    255,
+                    255,
+                    255
+                ]
+            },
+            {
+                "type": 6,
+                "name": "Runicmobesp",
+                "value": false
+            },
+            {
+                "type": 6,
+                "name": "arachneesp",
+                "value": true
+            },
+            {
+                "type": 6,
+                "name": "RatESP",
+                "value": false
+            },
+            {
+                "type": 6,
+                "name": "MatchoESP",
+                "value": false
+            },
+            {
+                "type": 6,
+                "name": "PrimalFearESP",
+                "value": false
+            },
+            {
+                "type": 6,
+                "name": "playeresp",
+                "value": true
+            },
+            {
+                "type": 7,
+                "name": "playerespmode",
+                "value": 1
+            },
+            {
+                "type": 6,
+                "name": "trapperesp",
+                "value": false
+            },
+            {
+                "type": 1,
+                "name": "trapperscansize",
+                "value": 10
+            },
+            {
+                "type": 6,
+                "name": "coreESP",
+                "value": false
+            },
+            {
+                "type": 6,
+                "name": "KeyGESP",
+                "value": false
+            },
+            {
+                "type": 6,
+                "name": "bfESP",
+                "value": false
+            },
+            {
+                "type": 6,
+                "name": "ggESP",
+                "value": false
+            },
+            {
+                "type": 6,
+                "name": "dgESP",
+                "value": false
+            },
+            {
+                "type": 6,
+                "name": "oldwolfESP",
+                "value": false
+            },
+            {
+                "type": 6,
+                "name": "GiftESP",
+                "value": false
+            },
+            {
+                "type": 6,
+                "name": "femboyESP",
+                "value": false
+            }
+        ]
+    },
+    {
+        "category": "Chat Blockers",
+        "settings": [
+            {
+                "type": 6,
+                "name": "blockBINTW",
+                "value": true
+            },
+            {
+                "type": 6,
+                "name": "BlockGUILDEXP",
+                "value": true
+            },
+            {
+                "type": 6,
+                "name": "hideprofileid",
+                "value": true
+            },
+            {
+                "type": 6,
+                "name": "hideprofilemsg",
+                "value": true
+            },
+            {
+                "type": 6,
+                "name": "LotteryMsg",
+                "value": true
+            },
+            {
+                "type": 6,
+                "name": "LinkWarningMsg",
+                "value": true
             }
         ]
     }

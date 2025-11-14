@@ -2,8 +2,7 @@ import settings from '../../config'
 import RenderLib from '../../../RenderLib/index'
 import RenderLibV2 from "../../../RenderLibV2";
 import Dungeon from "../../../BloomCore/dungeons/Dungeon"
-import { playerESPData } from '../../data/data.js'
-import { getIGN } from "../../utils/Function";
+
 
 // drawEspBoxV2 = (x, y, z, wx, h, wz, red, green, blue, alpha, phase, lineWidth)
 
@@ -184,36 +183,6 @@ register("renderWorld", () => {
     
 
 })
-
-// // Check if player is in the blacklist
-// function checkPlayerEspList(player) {
-//     const playerArray = playerESPData.playerWhitelist || [];
-//     const playerLower = player.toLowerCase();
-//     return playerArray.some(name => name.toLowerCase() === playerLower);
-// }
-
-// // Player ESP
-// register("renderWorld", (player) => {
-//     if (!settings().playeresp) return;
-
-//     // const whitelist = settings().playerespwhitelist.trim().split(/\s+/).map(name => name.toLowerCase());
-
-//     World.getAllEntities().forEach(entity => {
-//         if (entity.getClassName() !== "EntityOtherPlayerMP") return;
-//         const name = entity.getName();
-//         if (name === Player.getName()) return;
-
-//         switch (settings().playerespmode) {
-//             case 0: break;
-//             case 1: 
-//                 if (!whitelist.includes(name.toLowerCase())) return;
-//                 if (!checkPlayerEspList(player)) return;
-//             default: return;
-//         }
-
-//         RenderLib.drawEspBox(entity.getX(), entity.getY(), entity.getZ(), 1, 2, 0, 0.7, 0, 1, true);
-//     });
-// });
 
 // Rat ESP
 register("renderWorld", () => {
