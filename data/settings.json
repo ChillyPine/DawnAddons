@@ -25,7 +25,16 @@
             {
                 "type": 6,
                 "name": "hideLividNameTags",
-                "value": false
+                "value": true
+            },
+            {
+                "type": 6,
+                "name": "lividNameGUI",
+                "value": true
+            },
+            {
+                "type": 2,
+                "name": "moveLividGUI"
             },
             {
                 "type": 6,
@@ -542,7 +551,7 @@
             {
                 "type": 6,
                 "name": "showdebug",
-                "value": true
+                "value": false
             }
         ]
     },
@@ -617,15 +626,15 @@
             {
                 "type": 6,
                 "name": "lividSolver",
-                "value": false
+                "value": true
             },
             {
                 "type": 5,
                 "name": "lividBoxColor",
                 "value": [
-                    255,
-                    255,
-                    255,
+                    41,
+                    238,
+                    217,
                     255
                 ]
             },
@@ -657,7 +666,7 @@
             {
                 "type": 6,
                 "name": "playeresp",
-                "value": true
+                "value": false
             },
             {
                 "type": 7,
