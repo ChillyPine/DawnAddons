@@ -1,10 +1,8 @@
 import settings from '../../config'
 import RenderLib from '../../../RenderLib/index'
-import RenderLibV2 from "../../../RenderLibV2";
 import { playerESPData } from '../../data/data.js'
 
 const prefix = "&5[Dawn&6Addons&5]";
-
 
 const espwhitelist = {
     "add": function(...players) {
@@ -86,14 +84,14 @@ const espwhitelist = {
         const prevPage =
             currentPage > 1
                 ? new TextComponent("&r&e&l<<")
-                    .setClick("run_command", `/espwhitelist list ${currentPage - 1}`)
+                    .setClick("run_command", `/playeresp list ${currentPage - 1}`)
                     .setHover("show_text", "Click to go to previous page")
                 : "  ";
 
         const nextPage =
             currentPage < totalPages
                 ? new TextComponent("&r&e&l>>")
-                    .setClick("run_command", `/espwhitelist list ${currentPage + 1}`)
+                    .setClick("run_command", `/playeresp list ${currentPage + 1}`)
                     .setHover("show_text", "Click to go to next page")
                 : "  ";
 
@@ -109,7 +107,7 @@ const espwhitelist = {
             const line = new Message(
                 `                                     &7- `,
                 new TextComponent(`&b${player}`)
-                    .setClick("run_command", `/espwhitelist remove ${player}`)
+                    .setClick("run_command", `/playeresp remove ${player}`)
                     .setHover("show_text", `Click to remove &b[${player}] &ffrom the ESP whitelist`)
             );
             ChatLib.chat(line);
@@ -123,11 +121,11 @@ const espwhitelist = {
         const confirmMessage = new Message(
             `${prefix} &cAre you sure you want to reset the ESP whitelist? `,
             new TextComponent("&a&l[YES]")
-                .setClick("run_command", `/espwhitelist resetconfirm`)
+                .setClick("run_command", `/playeresp resetconfirm`)
                 .setHover("show_text", "&aClick to confirm reset"),
             " ",
             new TextComponent("&c&l[NO]")
-                .setClick("run_command", `/espwhitelist resetcancel`)
+                .setClick("run_command", `/playeresp resetcancel`)
                 .setHover("show_text", "&cClick to cancel")
         );
         ChatLib.chat(confirmMessage);
@@ -147,7 +145,7 @@ const espwhitelist = {
 // Register Main Command
 register("command", (actionType, ...players) => {
     if (!actionType) {
-        return ChatLib.chat(`${prefix} &cUsage: /espwhitelist <add|remove|list|reset> [player]`);
+        return ChatLib.chat(`${prefix} &cUsage: /playeresp <add|remove|list|reset> [player]`);
     }
 
     if (actionType == "add") espwhitelist.add(...players);
@@ -156,30 +154,8 @@ register("command", (actionType, ...players) => {
     else if (actionType == "reset") espwhitelist.reset();
     else if (actionType == "resetconfirm") espwhitelist.resetconfirm();
     else if (actionType == "resetcancel") espwhitelist.resetcancel();
-    else ChatLib.chat(`${prefix} &cCommand not recognized. Usage: /espwhitelist <add|remove|list|reset> [player]`);
-}).setName("espwhitelist");
-
-// Draw line function
-function drawLine(x1, y1, z1, x2, y2, z2, red, green, blue, alpha, lineWidth) {
-    GL11.glBlendFunc(770, 771)
-    GL11.glEnable(GL11.GL_BLEND)
-    GL11.glLineWidth(lineWidth)
-    GL11.glDisable(GL11.GL_TEXTURE_2D)
-    GL11.glDisable(GL11.GL_DEPTH_TEST)
-    GL11.glDepthMask(false)
-    GlStateManager.func_179094_E()
-
-    Tessellator.begin(GL11.GL_LINES).colorize(red, green, blue, alpha)
-    Tessellator.pos(x1, y1, z1).tex(0, 0)
-    Tessellator.pos(x2, y2, z2).tex(0, 0)
-    Tessellator.draw()
-
-    GlStateManager.func_179121_F()
-    GL11.glEnable(GL11.GL_TEXTURE_2D)
-    GL11.glEnable(GL11.GL_DEPTH_TEST)
-    GL11.glDepthMask(true)
-    GL11.glDisable(GL11.GL_BLEND)
-}
+    else ChatLib.chat(`${prefix} &cCommand not recognized. Usage: /playeresp <add|remove|list|reset> [player]`);
+}).setName("playeresp").setAliases(["pesp", "dawnaddonsespwhitelist"]);
 
 function checkPlayerEspList(player) {
     const playerArray = playerESPData.playerWhitelist || [];
