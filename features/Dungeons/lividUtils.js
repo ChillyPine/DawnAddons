@@ -3,6 +3,8 @@ import settings from '../../config'
 import RenderLibV2 from '../../../RenderLibV2/index'
 import { DraggableGui } from "../../../Atomx/draggable/DraggableGui"
 
+// Massive thanks to IcarusPhantom for letting us skid some of his code from ct import lividsolver!! <3
+
 // Livid HUD position + scale storage
 const data = new PogObject("DawnAddons", {
     pos: { x: 6, y: 6, scale: 1 }
