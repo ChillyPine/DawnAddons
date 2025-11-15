@@ -193,3 +193,9 @@ export function getEntityRenderParams(mcEntity, partialTicks) {
 export function playSound(sound) {
     sound.play();
 }
+
+// Used for corpseFinder.js only, from SU
+export const removeUnicode = (string) =>
+  typeof string !== "string"
+    ? ""
+    : string.replace(/[^\u0000-\u007F]/g, "").trim();

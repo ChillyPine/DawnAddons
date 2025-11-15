@@ -827,6 +827,13 @@ const defaultConf = new DefaultConfig("DawnAddons", "data/settings.json")
     subcategory: "Mining"
 })
 .addSwitch({
+    category: "Misc",
+    configName: "corpseFinder",
+    title: "Send Corpse Coordinates in Chat",
+    description: "Finds corpses when you enter a mineshaft and sends the coordinates in party chat in patcher format.",
+    subcategory: "Mining"
+})
+.addSwitch({
     category: "Notifications",
     configName: "ragDetect",
     title: "Rag Axe Display",

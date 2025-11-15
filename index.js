@@ -135,6 +135,10 @@ import './features/Mining/AmethystCrystalFinder';
 if (settings().showdebug) {
     ChatLib.chat(Debuger + " &fImported Crystal Finder");
 }
+import './features/Mining/corpseFinder';
+if (settings().showdebug) {
+    ChatLib.chat(Debuger + " &fImported Corpse Finder");
+}
 import './features/Misc/!Commands';
 if (settings().showdebug) {
     ChatLib.chat(Debuger + " &fImported !Commands");
