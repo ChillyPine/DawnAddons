@@ -5,8 +5,6 @@ let countdownTimers = [];
 register("chat", () => {
     if (!settings().fftimer) return;
     
-    // Clear any existing timers to prevent overlaps
-    countdownTimers.forEach(timer => clearTimeout(timer));
     countdownTimers = [];
     
     // Schedule all countdowns
