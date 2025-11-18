@@ -908,7 +908,6 @@ const defaultConf = new DefaultConfig("DawnAddons", "data/settings.json")
     description: "Shows a title when your pickaxe ability is off cooldown.",
     subcategory: "Misc"
 })
-// Begin Jerry Notifs
 .addSwitch({
     category: "Notifications",
     configName: "jerryNotif",
@@ -948,7 +947,6 @@ const defaultConf = new DefaultConfig("DawnAddons", "data/settings.json")
     subcategory: "Misc",
     shouldShow(data){ return data.jerryNotif }
 })
-// End Jerry Notifs
 .addSwitch({
     category: "ESPS",
     configName: "starmobesp",
@@ -1083,7 +1081,7 @@ const defaultConf = new DefaultConfig("DawnAddons", "data/settings.json")
     category: "ESPS",
     configName: "playerespmode",
     title: "Player ESP Mode",
-    description: "Run /da help for all Player ESP Commands",
+    description: "Run /da help for all Player ESP Commands.",
     options: ["All Players", "Specific Players"],
     value: 0,
     subcategory: "Players",
@@ -1103,7 +1101,7 @@ const defaultConf = new DefaultConfig("DawnAddons", "data/settings.json")
     category: "ESPS",
     configName: "trapperesp",
     title: "Trapper ESP",
-    description: "SkyHanni has one so we do to. Unlike Skyhanni, mine works in The Oasis",
+    description: "SkyHanni has one so we do too. Unlike Skyhanni, ours works in The Oasis.",
     subcategory: "Farming"
 })
 .addSlider({
