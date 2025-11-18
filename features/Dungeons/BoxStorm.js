@@ -1,5 +1,6 @@
 import settings from '../../config'
 import RenderLibV2 from "../../../RenderLibV2";
+import { depthCheck } from "../Misc/ESPS";
 
 const EntityWither = Java.type("net.minecraft.entity.boss.EntityWither");
 

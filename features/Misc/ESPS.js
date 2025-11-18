@@ -10,6 +10,8 @@ let inf4boss = false;
 let InJerryCave = false; 
 let ratESPtransparency = false;
 let playerIGN = Player.getName();
+export let depthCheck = false;
+let depthToggle = "on"
 
 
 register("chat", () => {
@@ -29,6 +31,17 @@ register("command", () => {
     ratESPtransparency = !ratESPtransparency
     ChatLib.chat(`&6[ESP] &7Rat's can be seen through walls: ${ratESPtransparency ? "&aTRUE" : "&cFALSE"}`);
 }).setName("ratesp");
+
+register("command", () => {
+    depthCheck = !depthCheck
+    if (depthCheck == false) {
+        depthToggle = "off"
+    } else {
+        depthToggle = "on"
+    }
+    ChatLib.chat(`&6[ESP] &r&7Toggled ESP ${depthToggle}.`)
+}).setName("depth")
+
 
 // getX, getY, getZ, something, something, r, g, b, something, see-through-walls
 register("renderWorld", () => {
@@ -105,9 +118,9 @@ register("renderWorld", () => {
             let FelBoxColor = RenderLibV2.getColor(settings().felboxcolor);
 
             if(mobName.includes("Fel") && mobName.includes("✯") && settings().starmobesp) {
-                RenderLibV2.drawEspBoxV2(ent.getX(), ent.getY() - 3, ent.getZ(), 1, 3, 1, FelBoxColor.red, FelBoxColor.green, FelBoxColor.blue, FelBoxColor.alpha, true, 2);
+                RenderLibV2.drawEspBoxV2(ent.getX(), ent.getY() - 3, ent.getZ(), 1, 3, 1, FelBoxColor.red, FelBoxColor.green, FelBoxColor.blue, FelBoxColor.alpha, depthCheck, 2);
             } else if(mobName.includes("✯") && !mobName.endsWith("✯") && settings().starmobesp){
-                RenderLibV2.drawEspBoxV2(ent.getX(), ent.getY() - 2, ent.getZ(), 1, 2, 1, StarMobboxColor.red, StarMobboxColor.green, StarMobboxColor.blue, StarMobboxColor.alpha, true, 2);
+                RenderLibV2.drawEspBoxV2(ent.getX(), ent.getY() - 2, ent.getZ(), 1, 2, 1, StarMobboxColor.red, StarMobboxColor.green, StarMobboxColor.blue, StarMobboxColor.alpha, depthCheck, 2);
             }
             
             // Runic Mob ESP
@@ -169,11 +182,15 @@ register("renderWorld", () => {
             if(ent.getName().includes("m4t3") && settings().femboyESP) {
                 RenderLib.drawEspBox(ent.getX(), ent.getY(), ent.getZ(), 1, 2, 1, 0, 0.894, 1, true)
                 drawLine(Player.getRenderX(), playerY, Player.getRenderZ(), ent.getX(), ent.getY() + 1, ent.getZ(), 1, 0, 0.894, 1, 1)
-            } 
+            }
+            // Shadow Assassain ESP
+            if (ent.getName().includes("Shadow Ass") && settings().boxsa && Dungeon.inDungeon){
+                RenderLib.drawEspBox(ent.getX(), ent.getY(), ent.getZ(), 1, 2, 0, 1, 1, 1, depthCheck);
+            }
         } else if(ent.getClassName() == "EntityBat" && !inf4boss){
             let BatESPColor = RenderLibV2.getColor(settings().batespcolor);
             if(!settings().batesp || !Dungeon.inDungeon || ent.isInvisible()) return
-            RenderLibV2.drawEspBoxV2(ent.getX(), ent.getY(), ent.getZ(), 0.5, 1, 0.5, BatESPColor.red, BatESPColor.green, BatESPColor.blue, BatESPColor.alpha, true, 2);
+            RenderLibV2.drawEspBoxV2(ent.getX(), ent.getY(), ent.getZ(), 0.5, 1, 0.5, BatESPColor.red, BatESPColor.green, BatESPColor.blue, BatESPColor.alpha, depthCheck, 2);
             if(settings().batesptracer) {
             drawLine(Player.getRenderX(), playerY, Player.getRenderZ(), ent.getX(), ent.getY() + 0.5, ent.getZ(), BatESPColor.red, BatESPColor.green, BatESPColor.blue, BatESPColor.alpha, 2);
             }
