@@ -10,9 +10,11 @@ let inf4boss = false;
 let InJerryCave = false; 
 let ratESPtransparency = false;
 let playerIGN = Player.getName();
-export let depthCheck = false;
 let depthToggle = "on"
 
+export const depthCheckObject = {
+    depthCheck: true
+}
 
 register("chat", () => {
     inf4boss = true
@@ -33,8 +35,8 @@ register("command", () => {
 }).setName("ratesp");
 
 register("command", () => {
-    depthCheck = !depthCheck
-    if (depthCheck == false) {
+    depthCheckObject.depthCheck = !depthCheckObject.depthCheck
+    if (depthCheckObject.depthCheck == false) {
         depthToggle = "off"
     } else {
         depthToggle = "on"

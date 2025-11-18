@@ -1,6 +1,6 @@
 import settings from '../../config'
 import RenderLibV2 from "../../../RenderLibV2";
-import { depthCheck } from "../Misc/ESPS";
+import { depthCheckObject } from "../Misc/ESPS";
 
 const EntityWither = Java.type("net.minecraft.entity.boss.EntityWither");
 
@@ -24,7 +24,7 @@ const render = register("renderWorld", () => {
         StormColorBox.green,
         StormColorBox.blue,
         1,
-        true
+        depthCheckObject.depthCheck
     );
     RenderLibV2.drawInnerEspBox(
         storm.getRenderX(),
@@ -36,7 +36,7 @@ const render = register("renderWorld", () => {
         StormColorBox.green,
         StormColorBox.blue,
         0.21,
-        true
+        depthCheckObject.depthCheck
     );
 
 }).unregister();

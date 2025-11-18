@@ -20,6 +20,9 @@ register("command", (arg) => {
         ChatLib.chat("&6/playeresp reset&f: Removes every player on the shitter list. Requires confirmation before resetting.");
         ChatLib.chat("&6/pesp: Alias of /playeresp");
         ChatLib.chat("&r&r&7&m-----------------------------------------------------");
+        ChatLib.chat("&r&r&6 ESP Commands");
+        ChatLib.chat("&6/depth: Changes most dungeon ESPs depth check status from true to false, making them \"legit.\"");
+        ChatLib.chat("&r&r&5&m----------------------------------------------------");
 
     } else if (!arg) {
         return settings().getConfig().openGui();
@@ -108,10 +111,6 @@ if (settings().showdebug) {
 import './features/Dungeons/Holding'
 if (settings().showdebug) {
     ChatLib.chat(Debuger + " &fImported Holding")
-}
-import './features/Dungeons/BoxSA'
-if (settings().showdebug) {
-    ChatLib.chat(Debuger + " &fImported BoxSA")
 }
 import './features/Dungeons/lividUtils'
 if (settings().showdebug) {
