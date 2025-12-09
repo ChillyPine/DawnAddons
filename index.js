@@ -232,6 +232,7 @@ import './features/Dungeons/CustomDeathMessage'
 if (settings().showdebug) {
     ChatLib.chat(Debuger + " &fImported Custom Death Message")
 }
+import './features/Misc/BottleProgressDisplay'
 //The below message lists all currently disabled modules/features. 
 // `(config)` indicates that it's been disabled in config.js, `(index)` indicates that it's been disabled in index.js, and `(.js)` indicates that it's been disabled in the actual code.
 if (settings().showdebug) {

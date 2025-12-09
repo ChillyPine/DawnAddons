@@ -541,6 +541,11 @@
                 "value": false
             },
             {
+                "type": 6,
+                "name": "corpseFinder",
+                "value": false
+            },
+            {
                 "type": 2,
                 "name": "instaBan"
             },
@@ -551,7 +556,12 @@
             {
                 "type": 6,
                 "name": "showdebug",
-                "value": false
+                "value": true
+            },
+            {
+                "type": 6,
+                "name": "BottleDisplay",
+                "value": true
             }
         ]
     },
@@ -611,7 +621,7 @@
             {
                 "type": 6,
                 "name": "spiritbearesp",
-                "value": false
+                "value": true
             },
             {
                 "type": 5,
