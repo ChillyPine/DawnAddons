@@ -120,9 +120,9 @@ register("renderWorld", () => {
             let FelBoxColor = RenderLibV2.getColor(settings().felboxcolor);
 
             if(mobName.includes("Fel") && mobName.includes("✯") && settings().starmobesp) {
-                RenderLibV2.drawEspBoxV2(ent.getX(), ent.getY() - 3, ent.getZ(), 1, 3, 1, FelBoxColor.red, FelBoxColor.green, FelBoxColor.blue, FelBoxColor.alpha, depthCheck, 2);
+                RenderLibV2.drawEspBoxV2(ent.getX(), ent.getY() - 3, ent.getZ(), 1, 3, 1, FelBoxColor.red, FelBoxColor.green, FelBoxColor.blue, FelBoxColor.alpha, depthCheckObject.depthCheck, 2);
             } else if(mobName.includes("✯") && !mobName.endsWith("✯") && settings().starmobesp){
-                RenderLibV2.drawEspBoxV2(ent.getX(), ent.getY() - 2, ent.getZ(), 1, 2, 1, StarMobboxColor.red, StarMobboxColor.green, StarMobboxColor.blue, StarMobboxColor.alpha, depthCheck, 2);
+                RenderLibV2.drawEspBoxV2(ent.getX(), ent.getY() - 2, ent.getZ(), 1, 2, 1, StarMobboxColor.red, StarMobboxColor.green, StarMobboxColor.blue, StarMobboxColor.alpha, depthCheckObject.depthCheck, 2);
             }
             
             // Runic Mob ESP
@@ -187,12 +187,12 @@ register("renderWorld", () => {
             }
             // Shadow Assassain ESP
             if (ent.getName().includes("Shadow Ass") && settings().boxsa && Dungeon.inDungeon){
-                RenderLib.drawEspBox(ent.getX(), ent.getY(), ent.getZ(), 1, 2, 0, 1, 1, 1, depthCheck);
+                RenderLib.drawEspBox(ent.getX(), ent.getY(), ent.getZ(), 1, 2, 0, 1, 1, 1, depthCheckObject.depthCheck);
             }
         } else if(ent.getClassName() == "EntityBat" && !inf4boss){
             let BatESPColor = RenderLibV2.getColor(settings().batespcolor);
             if(!settings().batesp || !Dungeon.inDungeon || ent.isInvisible()) return
-            RenderLibV2.drawEspBoxV2(ent.getX(), ent.getY(), ent.getZ(), 0.5, 1, 0.5, BatESPColor.red, BatESPColor.green, BatESPColor.blue, BatESPColor.alpha, depthCheck, 2);
+            RenderLibV2.drawEspBoxV2(ent.getX(), ent.getY(), ent.getZ(), 0.5, 1, 0.5, BatESPColor.red, BatESPColor.green, BatESPColor.blue, BatESPColor.alpha, depthCheckObject.depthCheck, 2);
             if(settings().batesptracer) {
             drawLine(Player.getRenderX(), playerY, Player.getRenderZ(), ent.getX(), ent.getY() + 0.5, ent.getZ(), BatESPColor.red, BatESPColor.green, BatESPColor.blue, BatESPColor.alpha, 2);
             }

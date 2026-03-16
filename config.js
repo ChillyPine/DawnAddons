@@ -1257,6 +1257,13 @@ const defaultConf = new DefaultConfig("DawnAddons", "data/settings.json")
     description: "",
     subcategory: "Debug"
 })
+.addSwitch({
+    category: "Misc",
+    configName: "BottleDisplay",
+    title: "Bottle Progress Display",
+    description: "Displays Charge Bottles Progress",
+    subcategory: "General"
+})
 
 //Declare categories and write settings file
 const categories = ["Dungeons", "Party Finder", "ESPS", "Notifications", "! Commands", "Chat Blockers", "Misc"]

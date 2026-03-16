@@ -10,9 +10,9 @@ function getModifiedLocation() {
     const playerZ = Math.floor(Player.getZ());
 
     // Calculate new coordinates
-    const newX = playerX + 61;
-    const newY = playerY - 48;
-    const newZ = playerZ + 18;
+    const newX = playerX + 29;
+    const newY = playerY - 32;
+    const newZ = playerZ + 48;
 
     return `&fCheese found at: x: ${newX}, y: ${newY}, z: ${newZ}`;
 }
