@@ -1,6 +1,6 @@
 import settings from '../../config'
 
-
+// Silly Comment
 // profile id hider
 register("chat", (event) => {
     if (!settings().hideprofileid) return
